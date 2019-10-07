@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yinengmr.github.io/</id>
     <title>Danny的博客</title>
-    <updated>2019-10-07T11:01:33.362Z</updated>
+    <updated>2019-10-07T11:20:59.200Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yinengmr.github.io/"/>
     <link rel="self" href="https://yinengmr.github.io//atom.xml"/>
@@ -10,6 +10,37 @@
     <logo>https://yinengmr.github.io//images/avatar.png</logo>
     <icon>https://yinengmr.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, Danny的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[openresty 学习参考资料]]></title>
+        <id>https://yinengmr.github.io//post/openresty-study</id>
+        <link href="https://yinengmr.github.io//post/openresty-study">
+        </link>
+        <updated>2019-10-07T11:08:53.000Z</updated>
+        <summary type="html"><![CDATA[<p>openresty 学习参考资料</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>openresty 学习参考资料</p>
+<!-- more -->
+<p>参考网站</p>
+<p><a href="http://openresty.org/cn/">OpenResty 官网</a></p>
+<p><a href="https://moonbingbing.gitbooks.io/openresty-best-practices/content/">OpenResty最佳实践</a><br>
+<a href="https://blog.csdn.net/orangleliu/article/details/60325268">OpenResty 技能图谱以及学习要点</a><br>
+<a href="http://jinnianshilongnian.iteye.com/blog/2190344">跟我学OpenResty(Nginx+Lua)开发目录贴</a><br>
+<a href="https://openresty.org/download/agentzh-nginx-tutorials-zhcn.html">agentzh 的 Nginx 教程</a><br>
+<a href="https://bg2bkk.github.io/post/nginx-gdb-utils%E7%9A%84%E7%BC%96%E8%AF%91%20%E5%AE%89%E8%A3%85%E5%92%8C%E4%BD%BF%E7%94%A8/">nginx gdb utils的编译 安装和使用</a><br>
+<a href="https://segmentfault.com/a/1190000007867494">OpenResty debugger: lua-resty-repl</a><br>
+<a href="http://www.guohuawei.com/archives/how-to-debug-in-openresty.html">openresty 如何调试</a><br>
+<a href="http://www.cnblogs.com/dakewei/archive/2017/12/23/8093011.html">linux性能分析工具之火焰图</a><br>
+<a href="https://www.jianshu.com/p/271db393cf58">使用ZeroBrane远程在线调试Openresty, Nginx的Lua程序</a></p>
+<p><a href="https://luarocks.org/">Luarocks 官网</a><br>
+<a href="https://www.cnblogs.com/xiangnan/p/7082511.html">将luarocks整合进openresty</a><br>
+<a href="https://blog.csdn.net/fozex/article/details/27353781">为git设置代理</a></p>
+<p><a href="http://luajit.org/">Luajit 官网</a><br>
+<a href="https://blog.csdn.net/ecidevilin/article/details/78630176">浅入浅出LuaJIT</a><br>
+<a href="https://www.cnblogs.com/zwywilliam/p/5992737.html">luajit官方性能优化指南和注解</a><br>
+<a href="https://www.cnblogs.com/quicklyslow/p/4794430.html">Luajit-2.1.0-beta1的发布和生成arm64用bytecode的解脱</a><br>
+<a href="https://my.oschina.net/362228416/blog/846741">penresty 应用打包并使用luajit编译lua代码实现简单加密</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[web前端开发基础题目]]></title>
         <id>https://yinengmr.github.io//post/web-qian-duan-kai-fa-ji-chu-ti-mu</id>
