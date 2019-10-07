@@ -1,27 +1,119 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://yinengmr.github.io/</id>
-    <title>Gridea</title>
-    <updated>2019-10-07T10:58:53.208Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://yinengmr.github.io/"/>
-    <link rel="self" href="https://yinengmr.github.io//atom.xml"/>
-    <subtitle>温故而知新</subtitle>
-    <logo>https://yinengmr.github.io//images/avatar.png</logo>
-    <icon>https://yinengmr.github.io//favicon.ico</icon>
-    <rights>All rights reserved 2019, Gridea</rights>
-    <entry>
-        <title type="html"><![CDATA[web前端开发基础题目]]></title>
-        <id>https://yinengmr.github.io//post/web-qian-duan-kai-fa-ji-chu-ti-mu</id>
-        <link href="https://yinengmr.github.io//post/web-qian-duan-kai-fa-ji-chu-ti-mu">
-        </link>
-        <updated>2019-10-03T07:45:32.000Z</updated>
-        <summary type="html"><![CDATA[<ul>
-<li>测试你有多了解 JavaScript，刷新你的知识</li>
-<li>答案在问题下方的折叠部分，点击即可展开问题。祝你好运</li>
-</ul>
-]]></summary>
-        <content type="html"><![CDATA[<ul>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>web前端开发基础题目 | Gridea</title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yinengmr.github.io//favicon.ico?v=1570445828975">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://yinengmr.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://yinengmr.github.io/">
+        <img src="https://yinengmr.github.io//images/avatar.png?v=1570445828975" class="site-logo">
+        <h1 class="site-title">Gridea</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/Yinengmr" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+          <a class="social-link" href="https://weibo.com/5430349192/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo" target="_blank">
+            <i class="fab fa-weibo"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yinengmr.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">web前端开发基础题目</h2>
+            <div class="post-date">2019-10-03</div>
+            
+              <div class="feature-container" style="background-image: url('https://yinengmr.github.io//post-images/web-qian-duan-kai-fa-ji-chu-ti-mu.png')">
+              </div>
+            
+            <div class="post-content">
+              <ul>
 <li>测试你有多了解 JavaScript，刷新你的知识</li>
 <li>答案在问题下方的折叠部分，点击即可展开问题。祝你好运</li>
 </ul>
@@ -348,6 +440,75 @@ console.log(Symbol('foo') === Symbol('foo'))
 <h6 id="2">2.</h6>
 <h6 id="4不使用第三方库实现时间转换yyyy-mm-dd-hhmmss-转为-刚刚-x分钟前-x小时前-昨天-x天前">4.不使用第三方库，实现时间转换，yyyy-MM-dd hh:mm:ss 转为 '刚刚' 、'x分钟前'、'x小时前'、'昨天'、'x天前'</h6>
 <h6 id="5可以描述new一个对象的详细过程手动实现一个new操作符">5.可以描述new一个对象的详细过程，手动实现一个new操作符</h6>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://yinengmr.github.io//tag/irNcL5BBo" class="tag">
+                    JavaScript
+                  </a>
+                
+              </div>
+            
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '2d5ac84cba1978997c57',
+        clientSecret: 'dae031973aed81d918dbeb49e5a8ab3b99ed2226',
+        repo: 'Yinengmr.github.io',
+        owner: 'Yinengmr',
+        admin: ['Yinengmr'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
