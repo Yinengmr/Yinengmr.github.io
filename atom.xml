@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yinengmr.github.io/</id>
     <title>Danny的博客</title>
-    <updated>2019-10-08T07:19:17.232Z</updated>
+    <updated>2019-10-08T07:25:45.980Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yinengmr.github.io/"/>
     <link rel="self" href="https://yinengmr.github.io//atom.xml"/>
@@ -387,6 +387,11 @@ for(i = 1;i &lt;= 9;i ++){
 </p>
 </details>
 <h6 id="2不使用第三方库实现时间转换yyyy-mm-dd-hhmmss-转为-刚刚-x分钟前-x小时前-昨天-x天前">2.不使用第三方库，实现时间转换，yyyy-MM-dd hh:mm:ss 转为 '刚刚' 、'x分钟前'、'x小时前'、'昨天'、'x天前'</h6>
+<details><summary><b>答案</b></summary>
+<p>
+https://www.cnblogs.com/iyitong/p/4688272.html
+</p>
+</details>
 <h6 id="3可以描述new一个对象的详细过程手动实现一个new操作符">3.可以描述new一个对象的详细过程，手动实现一个new操作符</h6>
 <details><summary><b>答案</b></summary>
 <p>
