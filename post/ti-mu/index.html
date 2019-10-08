@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>web前端开发基础题目 | Danny的博客</title>
+<title>web前端开发能力测评题目附答案 | Danny的博客</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -106,11 +106,8 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">web前端开发基础题目</h2>
-            <div class="post-date">2019-10-03</div>
-            
-              <div class="feature-container" style="background-image: url('https://yinengmr.github.io//post-images/web-qian-duan-kai-fa-ji-chu-ti-mu.png')">
-              </div>
+            <h2 class="post-title">web前端开发能力测评题目附答案</h2>
+            <div class="post-date">2019-10-08</div>
             
             <div class="post-content">
               <ul>
@@ -118,7 +115,7 @@
 <li>答案在问题下方的折叠部分，点击即可展开问题。祝你好运</li>
 </ul>
 <!-- more -->
-<h2 id="基础选择题">基础选择题</h2>
+<h2 id="基础选择题15道题-45分">基础选择题（15道题 45分）</h2>
 <h6 id="1-输出是什么">1. 输出是什么？</h6>
 <pre><code class="language-javascript">function sayHi() {
   console.log(name)
@@ -430,17 +427,72 @@ console.log(Symbol('foo') === Symbol('foo'))
 </p>
 </details>
 <hr>
-
+<h2 id="js扩展-5道题-25分">js扩展 （5道题 25分）</h2>
+<h6 id="1javascriptes6规定了几种数据类型-分别列出">1.JavaScript（ES6）规定了几种数据类型 分别列出</h6>
+<details><summary><b>答案</b></summary>
+<p>
+答：Null Undefined String Number Boolean Object Symbol（ES6新增）
+</p>
+</details>
+<h6 id="2null和undefined的区别">2.null和undefined的区别</h6>
+<details><summary><b>答案</b></summary>
+<p>
+- 答: Undefined类型只有一个值 Undefined ；Null类型也只有一个值，即null。null用来表示尚未存在(未声明)的对象
+</p>
+</details>
+<h6 id="3如何判断一个对象是否为数组">3.如何判断一个对象是否为数组</h6>
+<details><summary><b>答案</b></summary>
+<p>
+- console.log(Array.isArray([]));
+</p>
+</details>
+<h6 id="4axios是什么怎么使用">4.axios是什么?怎么使用?</h6>
+<details><summary><b>答案</b></summary>
+<p>
+- 答：引入资源 `npm install axios -S` 或者 `CDN`引入，然后axios.get或axios.post。成功返回在.then函数，失败则是在.catch函数中
+</p>
+</details>
+<h6 id="5vue-中-v-if和v-show的区别">5.Vue 中 V-if和V-show的区别</h6>
+<details><summary><b>答案</b></summary>
+<p>
+<ul>
+<li>答案：区别就是dom元素是否挂载了，v-show是dom树上有内容，不显示，display：none；v-if是dom树上无内容</li>
+</ul>
+</p>
+</details>
+<h2 id="代码实操-3道题-30分">代码实操 （3道题 30分）</h2>
+<h6 id="1js打印99乘法表">1.js打印99乘法表</h6>
+<details><summary><b>答案</b></summary>
+<p>
+<pre><code class="language-javascript">var i , j;
+for(i = 1;i &lt;= 9;i ++){
+    document.write(&quot;&lt;br&gt;&quot;);               // i 为行的乘数，j 为列数  每一行打印完后换行
+    for(j = 1;j &lt;= i;j ++){
+        sum = i * j;
+        document.write(i ,&quot;*&quot;,j ,&quot;=&quot;,sum,&quot;   &quot;);     // 使 &quot;i&quot; 和 &quot;j&quot; 能打印出来
+    }
+}
+</code></pre>
+</p>
+</details>
+<h6 id="2不使用第三方库实现时间转换yyyy-mm-dd-hhmmss-转为-刚刚-x分钟前-x小时前-昨天-x天前">2.不使用第三方库，实现时间转换，yyyy-MM-dd hh:mm:ss 转为 '刚刚' 、'x分钟前'、'x小时前'、'昨天'、'x天前'</h6>
+<h6 id="3可以描述new一个对象的详细过程手动实现一个new操作符">3.可以描述new一个对象的详细过程，手动实现一个new操作符</h6>
+<details><summary><b>答案</b></summary>
+<p>
+- 答: https://www.cnblogs.com/kevin2chen/p/6418327.html
+</p>
+</details>
             </div>
             
-              <div class="tag-container">
-                
-                  <a href="https://yinengmr.github.io//tag/irNcL5BBo" class="tag">
-                    JavaScript
-                  </a>
-                
-              </div>
             
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://yinengmr.github.io//post/openresty-study">
+                  <h3 class="post-title">
+                    openresty 学习参考资料
+                  </h3>
+                </a>
+              </div>
             
 
             
