@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Hello Gridea | Danny的博客</title>
+<title>重学前端 | Danny的博客</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -106,45 +106,79 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">Hello Gridea</h2>
-            <div class="post-date">2018-12-12</div>
-            
-              <div class="feature-container" style="background-image: url('https://yinengmr.github.io//post-images/hello-gridea.png')">
-              </div>
+            <h2 class="post-title">重学前端</h2>
+            <div class="post-date">2019-10-28</div>
             
             <div class="post-content">
-              <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+              <blockquote>
+<p>这两年一直零散的学习，前端后端不定时的切换，有利也有弊，前端方面一直在做pc端相关的，却忽略了移动端，事实上人们更多的在使用移动设备，因此打算从移动端角度重学前端</p>
+</blockquote>
+<h2 id="-more-1移动端的touch事件"><!-- more --><br>
+1.移动端的<code>touch</code>事件</h2>
+<pre><code class="language-js">/*单击操作的特点
+* 1.单击只有一根手指
+* 2.判断手指开始触摸和手指松开的时间差异不能大于指定的值  300/150
+* 3.保证没有滑动操作，如果有抖动必须保证抖动的距离在指定范围内*/
+var div=document.querySelector(&quot;div&quot;);
+
+var startTime,startX,startY;
+div.addEventListener(&quot;touchstart&quot;,function(e){
+    /*判断是否只有一根手指进行操作*/
+    if(e.targetTouches.length &gt; 1){ //说明不止一个手指
+        return;
+    }
+    /*记录手指开始触摸的时间*/
+    startTime=Date.now();
+    /*记录当前手指的坐标*/
+    startX= e.targetTouches[0].clientX;
+    startY= e.targetTouches[0].clientY;
+    /*来做一些与事件相关的初始化操作*/
+})
+
+/*添加手指滑动事件，当手指在屏幕上滑动时触发:move事件是持续触发*/
+div.addEventListener(&quot;touchmove&quot;,function(){
+    console.log(&quot;touchmove&quot;);
+});
+
+/*touchend：当手指松开时候触发，意味着当前元素上已经没有手指对象了,
+所以无法通过targetTouches来获取手指对象*/
+div.addEventListener(&quot;touchend&quot;,function(e){
+    /*判断是否只有一根手指进行操作*/
+    if(e.changedTouches.length &gt; 1){ //说明不止一个手指
+        return;
+    }
+    /*判断时间差异  150ms*/
+    console.log(Date.now()-startTime);
+    if(Date.now()-startTime &gt; 150){ //长按操作
+        return;
+    }
+    /*判断松开手指时的坐标与触摸开始时的坐标的距离差异*/
+    var endX=e.changedTouches[0].clientX;
+    var endY=e.changedTouches[0].clientY;
+    /*这里暂且将距离差异定为6*/
+    if(Math.abs(endX-startX) &lt; 6 &amp;&amp; Math.abs(endY-startY) &lt;6){
+        console.log(&quot;这就是移动端的单击事件--tap事件&quot;);
+        /*执行tap事件响应后的处理操作*/
+    }
+})
+
+/*添加触摸意外中断事件*/
+div.addEventListener(&quot;touchcancel&quot;,function(){
+
+});
+</code></pre>
 
             </div>
             
-              <div class="tag-container">
-                
-                  <a href="https://yinengmr.github.io//tag/1eCnCTMmb" class="tag">
-                    Gridea
-                  </a>
-                
-              </div>
             
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://yinengmr.github.io//post/ban-yun-yi-zuo-wei-cheng-xu-yuan-ni-bu-neng-cheng-gong-de-10-ge-ji-xiang">
+                  <h3 class="post-title">
+                    [搬运][译] 作为程序员你不能成功的 10 个迹象
+                  </h3>
+                </a>
+              </div>
             
 
             

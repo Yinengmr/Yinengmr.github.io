@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yinengmr.github.io/</id>
     <title>Danny的博客</title>
-    <updated>2019-10-11T06:00:39.291Z</updated>
+    <updated>2019-11-05T03:02:19.751Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yinengmr.github.io/"/>
     <link rel="self" href="https://yinengmr.github.io//atom.xml"/>
@@ -10,6 +10,75 @@
     <logo>https://yinengmr.github.io//images/avatar.png</logo>
     <icon>https://yinengmr.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, Danny的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[重学前端]]></title>
+        <id>https://yinengmr.github.io//post/chong-xue-qian-duan</id>
+        <link href="https://yinengmr.github.io//post/chong-xue-qian-duan">
+        </link>
+        <updated>2019-10-28T08:13:30.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>这两年一直零散的学习，前端后端不定时的切换，有利也有弊，前端方面一直在做pc端相关的，却忽略了移动端，事实上人们更多的在使用移动设备，因此打算从移动端角度重学前端</p>
+</blockquote>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>这两年一直零散的学习，前端后端不定时的切换，有利也有弊，前端方面一直在做pc端相关的，却忽略了移动端，事实上人们更多的在使用移动设备，因此打算从移动端角度重学前端</p>
+</blockquote>
+<h2 id="-more-1移动端的touch事件"><!-- more --><br>
+1.移动端的<code>touch</code>事件</h2>
+<pre><code class="language-js">/*单击操作的特点
+* 1.单击只有一根手指
+* 2.判断手指开始触摸和手指松开的时间差异不能大于指定的值  300/150
+* 3.保证没有滑动操作，如果有抖动必须保证抖动的距离在指定范围内*/
+var div=document.querySelector(&quot;div&quot;);
+
+var startTime,startX,startY;
+div.addEventListener(&quot;touchstart&quot;,function(e){
+    /*判断是否只有一根手指进行操作*/
+    if(e.targetTouches.length &gt; 1){ //说明不止一个手指
+        return;
+    }
+    /*记录手指开始触摸的时间*/
+    startTime=Date.now();
+    /*记录当前手指的坐标*/
+    startX= e.targetTouches[0].clientX;
+    startY= e.targetTouches[0].clientY;
+    /*来做一些与事件相关的初始化操作*/
+})
+
+/*添加手指滑动事件，当手指在屏幕上滑动时触发:move事件是持续触发*/
+div.addEventListener(&quot;touchmove&quot;,function(){
+    console.log(&quot;touchmove&quot;);
+});
+
+/*touchend：当手指松开时候触发，意味着当前元素上已经没有手指对象了,
+所以无法通过targetTouches来获取手指对象*/
+div.addEventListener(&quot;touchend&quot;,function(e){
+    /*判断是否只有一根手指进行操作*/
+    if(e.changedTouches.length &gt; 1){ //说明不止一个手指
+        return;
+    }
+    /*判断时间差异  150ms*/
+    console.log(Date.now()-startTime);
+    if(Date.now()-startTime &gt; 150){ //长按操作
+        return;
+    }
+    /*判断松开手指时的坐标与触摸开始时的坐标的距离差异*/
+    var endX=e.changedTouches[0].clientX;
+    var endY=e.changedTouches[0].clientY;
+    /*这里暂且将距离差异定为6*/
+    if(Math.abs(endX-startX) &lt; 6 &amp;&amp; Math.abs(endY-startY) &lt;6){
+        console.log(&quot;这就是移动端的单击事件--tap事件&quot;);
+        /*执行tap事件响应后的处理操作*/
+    }
+})
+
+/*添加触摸意外中断事件*/
+div.addEventListener(&quot;touchcancel&quot;,function(){
+
+});
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[搬运][译] 作为程序员你不能成功的 10 个迹象]]></title>
         <id>https://yinengmr.github.io//post/ban-yun-yi-zuo-wei-cheng-xu-yuan-ni-bu-neng-cheng-gong-de-10-ge-ji-xiang</id>
