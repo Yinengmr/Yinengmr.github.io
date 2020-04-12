@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yinengmr.github.io/</id>
     <title>Danny的博客</title>
-    <updated>2020-04-12T12:37:10.726Z</updated>
+    <updated>2020-04-12T12:46:55.998Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yinengmr.github.io/"/>
     <link rel="self" href="https://yinengmr.github.io/atom.xml"/>
@@ -138,8 +138,8 @@ div.addEventListener(&quot;touchcancel&quot;,function(){
     </entry>
     <entry>
         <title type="html"><![CDATA[[搬运][译] 作为程序员你不能成功的 10 个迹象]]></title>
-        <id>https://yinengmr.github.io/post/ban-yun-yi-zuo-wei-cheng-xu-yuan-ni-bu-neng-cheng-gong-de-10-ge-ji-xiang/</id>
-        <link href="https://yinengmr.github.io/post/ban-yun-yi-zuo-wei-cheng-xu-yuan-ni-bu-neng-cheng-gong-de-10-ge-ji-xiang/">
+        <id>https://yinengmr.github.io/post/2019-10-10-001/</id>
+        <link href="https://yinengmr.github.io/post/2019-10-10-001/">
         </link>
         <updated>2019-10-10T02:47:16.000Z</updated>
         <summary type="html"><![CDATA[<p>编程是人类的基本技能，就像阅读、写作和算术一样。任何人都可以通过时间和努力学习编程。</p>
