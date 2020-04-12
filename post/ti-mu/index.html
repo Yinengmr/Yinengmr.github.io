@@ -1,124 +1,131 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" >
 
-<title>web前端开发能力测评题目附答案 | Danny的博客</title>
-<meta name="description" content="温故而知新">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://yinengmr.github.io//favicon.ico?v=1572922904572">
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    web前端开发能力测评题目附答案 | Danny的博客
+</title>
+<link rel="shortcut icon" href="https://yinengmr.github.io//favicon.ico?v=1586685434969">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://yinengmr.github.io//styles/main.css">
-
-
-  
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
-  
-
-  
-
-
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://yinengmr.github.io//media/js/jquery.sticky-sidebar.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
-  </head>
-  <body>
-    <div id="app" class="main">
+        
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                
 
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://yinengmr.github.io/">
-        <img src="https://yinengmr.github.io//images/avatar.png?v=1572922904572" class="site-logo">
-        <h1 class="site-title">Danny的博客</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
+                    
+                            
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://yinengmr.github.io/">
+                <img class="avatar" src="https://yinengmr.github.io//images/avatar.png?v=1586685434969" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    Danny的博客
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
     </div>
-    <div>
-      
-        
-          <a href="/" class="site-nav">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="site-nav">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="site-nav">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="site-nav">
-            关于
-          </a>
-        
-      
-    </div>
-  </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-          <a class="social-link" href="https://github.com/Yinengmr" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        
-      
-        
-      
-        
-          <a class="social-link" href="https://weibo.com/5430349192/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo" target="_blank">
-            <i class="fab fa-weibo"></i>
-          </a>
-        
-      
-        
-      
-        
-      
-    </div>
-    <div class="site-description">
-      温故而知新
-    </div>
-    <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yinengmr.github.io//atom.xml" target="_blank">RSS</a>
-    </div>
-  </div>
 </div>
 
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
 
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">web前端开发能力测评题目附答案</h2>
-            <div class="post-date">2019-10-08</div>
-            
-              <div class="feature-container" style="background-image: url('https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1570531486637&amp;di=c3b6abcf5ad69edb1763f1052cf2c9cb&amp;imgtype=0&amp;src=http%3A%2F%2Fwww.1ke.co%2Ffiles%2Fcourse%2F2017%2F01-20%2F110919fc868a787658.jpg%3F4.9.3')">
-              </div>
-            
-            <div class="post-content">
-              <ul>
-<li>测试你有多了解 JavaScript，刷新你的知识</li>
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            web前端开发能力测评题目附答案
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2019-10-08</time>
+                            
+                                <a href="https://yinengmr.github.io/tag/irNcL5BBo/" class="post-tag i-tag
+                            i-tag-other_1">
+                            #JavaScript
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('https://yinengmr.github.io//post-images/ti-mu.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <ul>
+<li>测试你有多了解 <em>JavaScript</em>，刷新你的知识</li>
 <li>答案在问题下方的折叠部分，点击即可展开问题。祝你好运</li>
 </ul>
 <!-- more -->
-<h2 id="基础选择题15道题-45分">基础选择题（15道题 45分）</h2>
 <h6 id="1-输出是什么">1. 输出是什么？</h6>
 <pre><code class="language-javascript">function sayHi() {
   console.log(name)
@@ -497,83 +504,231 @@ https://www.cnblogs.com/iyitong/p/4688272.html
 <p><img src="http://note.youdao.com/yws/res/3052/WEBRESOURCE04f19e185a45f6c230a61fbb16d99d1c" width = "260" height = "260" alt="图片名称" 
 align=center></p>
 
-            </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://yinengmr.github.io//tag/irNcL5BBo" class="tag">
-                    JavaScript
-                  </a>
-                
-              </div>
-            
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://yinengmr.github.io//post/openresty-study">
-                  <h3 class="post-title">
-                    openresty 学习参考资料
-                  </h3>
-                </a>
-              </div>
-            
-
-            
-              
-                <div id="gitalk-container" data-aos="fade-in"></div>
-              
-
-              
-            
-
-          </div>
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://yinengmr.github.io/post/openresty-study/">
+                                <h3 class="post-title">
+                                    openresty 学习参考资料
+                                </h3>
+                            </a>
+                        </div>
+                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#1-%E8%BE%93%E5%87%BA%E6%98%AF%E4%BB%80%E4%B9%88">1. 输出是什么？</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E7%AD%94%E6%A1%88-d">答案: D</a><br>
+*
+<ul>
+<li><a href="#2-%E8%BE%93%E5%87%BA%E6%98%AF%E4%BB%80%E4%B9%88">2. 输出是什么？</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AD%94%E6%A1%88-c">答案: C</a><br>
+*
+<ul>
+<li><a href="#3-%E8%BE%93%E5%87%BA%E6%98%AF%E4%BB%80%E4%B9%88">3. 输出是什么？</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AD%94%E6%A1%88-a">答案: A</a><br>
+*
+<ul>
+<li><a href="#4-%E8%BE%93%E5%87%BA%E6%98%AF%E4%BB%80%E4%B9%88">4. 输出是什么？</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AD%94%E6%A1%88-c-2">答案: C</a><br>
+*
+<ul>
+<li><a href="#5-%E8%BE%93%E5%87%BA%E6%98%AF%E4%BB%80%E4%B9%88">5. 输出是什么？</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AD%94%E6%A1%88-a-2">答案: A</a><br>
+*
+<ul>
+<li><a href="#6-%E8%BE%93%E5%87%BA%E6%98%AF%E4%BB%80%E4%B9%88">6. 输出是什么？</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AD%94%E6%A1%88-c-3">答案: C</a><br>
+*
+<ul>
+<li><a href="#7-%E8%BE%93%E5%87%BA%E6%98%AF%E4%BB%80%E4%B9%88">7. 输出是什么？</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AD%94%E6%A1%88-c-4">答案: C</a><br>
+*
+<ul>
+<li><a href="#8-%E8%BE%93%E5%87%BA%E6%98%AF%E4%BB%80%E4%B9%88">8. 输出是什么？</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AD%94%E6%A1%88-b">答案: B</a><br>
+*
+<ul>
+<li><a href="#9-%E8%BE%93%E5%87%BA%E6%98%AF%E4%BB%80%E4%B9%88">9. 输出是什么？</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AD%94%E6%A1%88-c-5">答案: C</a><br>
+*
+<ul>
+<li><a href="#10-%E5%BD%93%E6%82%A8%E5%8D%95%E5%87%BB%E8%AF%A5%E6%AE%B5%E8%90%BD%E6%97%B6%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA%E6%98%AF%E4%BB%80%E4%B9%88">10. 当您单击该段落时，日志输出是什么？</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AD%94%E6%A1%88-a-3">答案: A</a><br>
+*
+<ul>
+<li><a href="#11-javascript-%E4%B8%AD%E7%9A%84%E4%B8%80%E5%88%87%E9%83%BD%E6%98%AF">11. JavaScript 中的一切都是？</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AD%94%E6%A1%88-a-4">答案: A</a><br>
+*
+<ul>
+<li><a href="#12-%E8%BE%93%E5%87%BA%E6%98%AF%E4%BB%80%E4%B9%88">12. 输出是什么?</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AD%94%E6%A1%88-b-2">答案: B</a><br>
+*
+<ul>
+<li><a href="#13-num%E7%9A%84%E5%80%BC%E6%98%AF%E4%BB%80%E4%B9%88">13. <code>num</code>的值是什么?</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AD%94%E6%A1%88-c-6">答案: C</a><br>
+*
+<ul>
+<li><a href="#14-%E8%BE%93%E5%87%BA%E6%98%AF%E4%BB%80%E4%B9%88">14. 输出是什么?</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AD%94%E6%A1%88-a-5">答案: A</a><br>
+*
+<ul>
+<li><a href="#15-%E8%BE%93%E5%87%BA%E4%BB%80%E4%B9%88">15. 输出什么?</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AD%94%E6%A1%88-a-6">答案: A</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#js%E6%89%A9%E5%B1%95-5%E9%81%93%E9%A2%98-25%E5%88%86">js扩展 （5道题 25分）</a><br>
+*<br>
+*<br>
+*<br>
+* <a href="#1javascriptes6%E8%A7%84%E5%AE%9A%E4%BA%86%E5%87%A0%E7%A7%8D%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B-%E5%88%86%E5%88%AB%E5%88%97%E5%87%BA">1.JavaScript（ES6）规定了几种数据类型 分别列出</a><br>
+* <a href="#2null%E5%92%8Cundefined%E7%9A%84%E5%8C%BA%E5%88%AB">2.null和undefined的区别</a><br>
+* <a href="#3%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%B8%BA%E6%95%B0%E7%BB%84">3.如何判断一个对象是否为数组</a><br>
+* <a href="#4axios%E6%98%AF%E4%BB%80%E4%B9%88%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8">4.axios是什么?怎么使用?</a><br>
+* <a href="#5vue-%E4%B8%AD-v-if%E5%92%8Cv-show%E7%9A%84%E5%8C%BA%E5%88%AB">5.Vue 中 V-if和V-show的区别</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E6%93%8D-3%E9%81%93%E9%A2%98-30%E5%88%86">代码实操 （3道题 30分）</a><br>
+*<br>
+*<br>
+*<br>
+* <a href="#1js%E6%89%93%E5%8D%B099%E4%B9%98%E6%B3%95%E8%A1%A8">1.js打印99乘法表</a><br>
+* <a href="#2%E4%B8%8D%E4%BD%BF%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E5%AE%9E%E7%8E%B0%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2yyyy-mm-dd-hhmmss-%E8%BD%AC%E4%B8%BA-%E5%88%9A%E5%88%9A-x%E5%88%86%E9%92%9F%E5%89%8D-x%E5%B0%8F%E6%97%B6%E5%89%8D-%E6%98%A8%E5%A4%A9-x%E5%A4%A9%E5%89%8D">2.不使用第三方库，实现时间转换，yyyy-MM-dd hh:mm:ss 转为 '刚刚' 、'x分钟前'、'x小时前'、'昨天'、'x天前'</a><br>
+* <a href="#3%E5%8F%AF%E4%BB%A5%E6%8F%8F%E8%BF%B0new%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%AF%A6%E7%BB%86%E8%BF%87%E7%A8%8B%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAnew%E6%93%8D%E4%BD%9C%E7%AC%A6">3.可以描述new一个对象的详细过程，手动实现一个new操作符</a></li>
+</ul>
+</li>
+</ul>
 
         </div>
-      </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
     </div>
+    
+                            
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+                </div>
 
-<script type="application/javascript">
 
-AOS.init();
 
-hljs.initHighlightingOnLoad()
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+            </div>
 
+
+            <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://yinengmr.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
 </script>
 
 
-
-  
-    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    </div>
     <script>
-
-      var gitalk = new Gitalk({
-        clientID: '2d5ac84cba1978997c57',
-        clientSecret: 'dae031973aed81d918dbeb49e5a8ab3b99ed2226',
-        repo: 'Yinengmr.github.io',
-        owner: 'Yinengmr',
-        admin: ['Yinengmr'],
-        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-        distractionFreeMode: false  // Facebook-like distraction free mode
-      })
-
-      gitalk.render('gitalk-container')
-
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
     </script>
-  
+    
+        
+            <script>
+    window.onload = function() {
+        var gitalk = new Gitalk({
+            clientID: '2d5ac84cba1978997c57',
+            clientSecret: 'dae031973aed81d918dbeb49e5a8ab3b99ed2226',
+            repo: 'Yinengmr.github.io',
+            owner: 'Yinengmr',
+            admin: ['Yinengmr'],
+            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+            distractionFreeMode: false // Facebook-like distraction free mode
+        })
 
-  
+        gitalk.render('gitalk-container')
+    }
+</script>
+                
 
+                    
+                                
+</body>
 
-
-
-  </body>
 </html>

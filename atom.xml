@@ -2,27 +2,84 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yinengmr.github.io/</id>
     <title>Danny的博客</title>
-    <updated>2019-11-05T03:02:19.751Z</updated>
+    <updated>2020-04-12T09:59:35.246Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yinengmr.github.io/"/>
-    <link rel="self" href="https://yinengmr.github.io//atom.xml"/>
+    <link rel="self" href="https://yinengmr.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://yinengmr.github.io//images/avatar.png</logo>
-    <icon>https://yinengmr.github.io//favicon.ico</icon>
-    <rights>All rights reserved 2019, Danny的博客</rights>
+    <logo>https://yinengmr.github.io/images/avatar.png</logo>
+    <icon>https://yinengmr.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, Danny的博客</rights>
     <entry>
-        <title type="html"><![CDATA[重学前端]]></title>
-        <id>https://yinengmr.github.io//post/chong-xue-qian-duan</id>
-        <link href="https://yinengmr.github.io//post/chong-xue-qian-duan">
+        <title type="html"><![CDATA[国内加速访问 GitHub]]></title>
+        <id>https://yinengmr.github.io/post/guo-nei-jia-su-fang-wen-github/</id>
+        <link href="https://yinengmr.github.io/post/guo-nei-jia-su-fang-wen-github/">
         </link>
-        <updated>2019-10-28T08:13:30.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>这两年一直零散的学习，前端后端不定时的切换，有利也有弊，前端方面一直在做pc端相关的，却忽略了移动端，事实上人们更多的在使用移动设备，因此打算从移动端角度重学前端</p>
+        <updated>2020-04-12T09:23:30.000Z</updated>
+        <summary type="html"><![CDATA[<p>中国访问 GitHub 的速度不忍直视，那就叫一个慢！</p>
+<blockquote>
+<p>为什么访问速度会很慢？<br>
+GitHub 在国内访问速度慢的问题原因有很多，但最直接和最主要的原因是 GitHub 的分发加速网络的域名遭到 dns 污染。</p>
 </blockquote>
 ]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>这两年一直零散的学习，前端后端不定时的切换，有利也有弊，前端方面一直在做pc端相关的，却忽略了移动端，事实上人们更多的在使用移动设备，因此打算从移动端角度重学前端</p>
+        <content type="html"><![CDATA[<p>中国访问 GitHub 的速度不忍直视，那就叫一个慢！</p>
+<blockquote>
+<p>为什么访问速度会很慢？<br>
+GitHub 在国内访问速度慢的问题原因有很多，但最直接和最主要的原因是 GitHub 的分发加速网络的域名遭到 dns 污染。</p>
 </blockquote>
+<!-- more -->
+<blockquote>
+<p>如何解决 DNS 污染？<br>
+通过修改 hosts 解决污染问题</p>
+</blockquote>
+<h2 id="解决方法">解决方法</h2>
+<p><strong>不需要科（）学（）上网，也不需要开代理加速器。</strong></p>
+<h2 id="一-查询网址对应的-ip-地址">一、查询网址对应的 IP 地址</h2>
+<p>查询地址：https://www.ipaddress.com/</p>
+<p>点击下面 域名（domain）自动跳转到 <code>ipaddress.com</code> 查询结果页面：</p>
+<!-- more -->
+<ul>
+<li>
+<p><a href="https://github.com.ipaddress.com/">github.com</a></p>
+</li>
+<li>
+<p><a href="https://github.com.ipaddress.com/assets-cdn.github.com">assets-cdn.github.com</a></p>
+</li>
+<li>
+<p><a href="https://fastly.net.ipaddress.com/github.global.ssl.fastly.net">github.global.ssl.fastly.net</a></p>
+</li>
+</ul>
+<p><img src="https://yinengmr.github.io//post-images/1586684413064.png" alt="" loading="lazy"><br>
+<img src="https://yinengmr.github.io//post-images/1586684500843.png" alt="" loading="lazy"><br>
+<img src="https://yinengmr.github.io//post-images/1586684556576.png" alt="" loading="lazy"></p>
+<h2 id="二-修改本地系统-hosts-文件">二、修改本地系统 hosts 文件</h2>
+<p><strong>hosts 文件路径：C:\Windows\System32\drivers\etc\hosts</strong></p>
+<p>使用管理员权限修改host文件，将查询到的 IP 和 域名写在 hosts 文件的最后即可</p>
+<pre><code>140.82.112.3	  github.com	
+185.199.108.153   assets-cdn.github.com
+185.199.109.153   assets-cdn.github.com
+185.199.110.153   assets-cdn.github.com
+185.199.111.153   assets-cdn.github.com
+199.232.69.194    github.global.ssl.fastly.net
+</code></pre>
+<h2 id="三-刷新本地系统-dns-缓存">三、刷新本地系统 dns 缓存</h2>
+<p>用 WIN + R 快捷键打开运行窗口，输入命令：cmd 并回车进入命令行窗口。</p>
+<p>接着输入命令：</p>
+<pre><code>ipconfig /flushdns 
+</code></pre>
+<p>回车后执行刷新本地 dns 缓存数据即可</p>
+<p><code>文末</code> <strong>如果有一天用着用着发现又变慢了，有可能是GitHub的ip发生了变化，这时候要重新查询ip 再次修改host文件了</strong></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[重学前端]]></title>
+        <id>https://yinengmr.github.io/post/chong-xue-qian-duan/</id>
+        <link href="https://yinengmr.github.io/post/chong-xue-qian-duan/">
+        </link>
+        <updated>2019-10-28T08:13:30.000Z</updated>
+        <summary type="html"><![CDATA[<p>这两年一直零散的学习，前端后端不定时的切换，有利也有弊，前端方面一直在做pc端相关的，却忽略了移动端，事实上人们更多的在使用移动设备，因此打算从移动端角度重学前端</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>这两年一直零散的学习，前端后端不定时的切换，有利也有弊，前端方面一直在做pc端相关的，却忽略了移动端，事实上人们更多的在使用移动设备，因此打算从移动端角度重学前端</p>
 <h2 id="-more-1移动端的touch事件"><!-- more --><br>
 1.移动端的<code>touch</code>事件</h2>
 <pre><code class="language-js">/*单击操作的特点
@@ -81,8 +138,8 @@ div.addEventListener(&quot;touchcancel&quot;,function(){
     </entry>
     <entry>
         <title type="html"><![CDATA[[搬运][译] 作为程序员你不能成功的 10 个迹象]]></title>
-        <id>https://yinengmr.github.io//post/ban-yun-yi-zuo-wei-cheng-xu-yuan-ni-bu-neng-cheng-gong-de-10-ge-ji-xiang</id>
-        <link href="https://yinengmr.github.io//post/ban-yun-yi-zuo-wei-cheng-xu-yuan-ni-bu-neng-cheng-gong-de-10-ge-ji-xiang">
+        <id>https://yinengmr.github.io/post/ban-yun-yi-zuo-wei-cheng-xu-yuan-ni-bu-neng-cheng-gong-de-10-ge-ji-xiang/</id>
+        <link href="https://yinengmr.github.io/post/ban-yun-yi-zuo-wei-cheng-xu-yuan-ni-bu-neng-cheng-gong-de-10-ge-ji-xiang/">
         </link>
         <updated>2019-10-10T02:47:16.000Z</updated>
         <summary type="html"><![CDATA[<p>编程是人类的基本技能，就像阅读、写作和算术一样。任何人都可以通过时间和努力学习编程。</p>
@@ -184,30 +241,24 @@ div.addEventListener(&quot;touchcancel&quot;,function(){
 <h3 id="总结">总结</h3>
 <p>虽然编程是一项很难学习的技能，但它肯定是大多数人都能学的。上面的清单包含了阻碍学习的一些态度和思维方式，但是大多数人可以克服它们，并在编程领域发展自己的能力 —— 如果不是精通的话。</p>
 <p>如果你对学习编程感兴趣，我鼓励你开始这个旅程。记住上面的清单，网上有很多可以让你快速前进的资源，快去探索吧，你不会后悔的。</p>
-<ul>
-<li>如果此文章帮到了你，请记得打赏~ 感谢您的支持！</li>
-</ul>
-<p><img src="http://note.youdao.com/yws/res/3052/WEBRESOURCE04f19e185a45f6c230a61fbb16d99d1c" width = "260" height = "260" alt="图片名称" 
-align=center></p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[web前端开发能力测评题目附答案]]></title>
-        <id>https://yinengmr.github.io//post/ti-mu</id>
-        <link href="https://yinengmr.github.io//post/ti-mu">
+        <id>https://yinengmr.github.io/post/ti-mu/</id>
+        <link href="https://yinengmr.github.io/post/ti-mu/">
         </link>
         <updated>2019-10-08T01:19:37.000Z</updated>
         <summary type="html"><![CDATA[<ul>
-<li>测试你有多了解 JavaScript，刷新你的知识</li>
+<li>测试你有多了解 <em>JavaScript</em>，刷新你的知识</li>
 <li>答案在问题下方的折叠部分，点击即可展开问题。祝你好运</li>
 </ul>
 ]]></summary>
         <content type="html"><![CDATA[<ul>
-<li>测试你有多了解 JavaScript，刷新你的知识</li>
+<li>测试你有多了解 <em>JavaScript</em>，刷新你的知识</li>
 <li>答案在问题下方的折叠部分，点击即可展开问题。祝你好运</li>
 </ul>
 <!-- more -->
-<h2 id="基础选择题15道题-45分">基础选择题（15道题 45分）</h2>
 <h6 id="1-输出是什么">1. 输出是什么？</h6>
 <pre><code class="language-javascript">function sayHi() {
   console.log(name)
@@ -589,8 +640,8 @@ align=center></p>
     </entry>
     <entry>
         <title type="html"><![CDATA[openresty 学习参考资料]]></title>
-        <id>https://yinengmr.github.io//post/openresty-study</id>
-        <link href="https://yinengmr.github.io//post/openresty-study">
+        <id>https://yinengmr.github.io/post/openresty-study/</id>
+        <link href="https://yinengmr.github.io/post/openresty-study/">
         </link>
         <updated>2019-10-07T11:08:53.000Z</updated>
         <summary type="html"><![CDATA[<p>openresty 学习参考资料</p>
