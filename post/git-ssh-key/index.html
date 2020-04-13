@@ -5,7 +5,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    github | Danny的博客
+    GIT ssh-key 本地秘钥生成 | Danny的博客
 </title>
 <link rel="shortcut icon" href="https://yinengmr.github.io//favicon.ico?v=1586784614885">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
@@ -19,6 +19,14 @@
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
+        
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                
+
+                    
+                            
 </head>
 
 <body>
@@ -101,114 +109,63 @@
     });
 </script>
 
-            <div id="main-content" class="post-container main-container">
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
                 <div id="content" class="main-container-left">
-                    
-    <div class="i-card">
-        <b>标签：#
-        github</b>
-    </div>
-    
-        
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://yinengmr.github.io/post/guo-nei-jia-su-fang-wen-github/">
-                        国内加速访问 GitHub
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2020-04-10</time>
-                    
-                        <a href="https://yinengmr.github.io/tag/H8duSqNFD/" class="post-tag i-tag
-                            i-tag-other_4">
-            #github
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                        <a href="https://yinengmr.github.io/post/guo-nei-jia-su-fang-wen-github/" class="post-feature-image" style="background-image:url(https://yinengmr.github.io//post-images/guo-nei-jia-su-fang-wen-github.jpg) ">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            GIT ssh-key 本地秘钥生成
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2018-05-10</time>
+                            
+                                <a href="https://yinengmr.github.io/tag/H8duSqNFD/" class="post-tag i-tag
+                            i-tag-banana">
+                            #github
                         </a>
-                        
-                            <div class="post-content">
                                 
-                                    <div class="post-content-abstract">
-                                        <p>中国访问 GitHub 的速度不忍直视，那就叫一个慢！</p>
-<blockquote>
-<p>为什么访问速度会很慢？<br>
-GitHub 在国内访问速度慢的问题原因有很多，但最直接和最主要的原因是 GitHub 的分发加速网络的域名遭到 dns 污染。</p>
-</blockquote>
-
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="https://yinengmr.github.io/post/guo-nei-jia-su-fang-wen-github/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="https://yinengmr.github.io/post/git-ssh-key/">
-                        GIT ssh-key 本地秘钥生成
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2018-05-10</time>
-                    
-                        <a href="https://yinengmr.github.io/tag/H8duSqNFD/" class="post-tag i-tag
-                            i-tag-success">
-            #github
-        </a>
+                        </div>
                         
-                </div>
-                <div class="post-article">
-                    
-                        <a href="https://yinengmr.github.io/post/git-ssh-key/" class="post-feature-image" style="background-image:url(https://yinengmr.github.io//post-images/git-ssh-key.jpg) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            一、设置git的username 和 useremail
-git config --global user.name &amp;quot;user.name&amp;quot;
-git config --global user.email &amp;quot;user.email&amp;quot;
-
-二、生成秘钥
-1）查看是否有ssh秘钥
-ls ~/.ssh
+                            <div class="post-feature-image" style="background-image: url('https://yinengmr.github.io//post-images/git-ssh-key.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <p>一、设置git的username 和 useremail</p>
+<pre><code class="language-shell">git config --global user.name &quot;user.name&quot;
+git config --global user.email &quot;user.email&quot;
+</code></pre>
+<p>二、生成秘钥<br>
+1）查看是否有ssh秘钥</p>
+<pre><code class="language-shell">ls ~/.ssh
 id_rsa  id_rsa.pub  known_hosts
+</code></pre>
+<p>2）没有id_rsa 和 id_rsa.pub则生成</p>
+<pre><code class="language-shell">ssh-keygen -t rsa -C &quot;your_email@youremail.com&quot;
+</code></pre>
+<p>执行完ssh-keygen之后会在，用户目录下的.ssh文件下，生成一个id_rsa文件和id_rsa.pub文件。</p>
+<ul>
+<li>id_rsa文件是私钥，要保存好，放在本地，私钥可以生产公钥，反之不行。</li>
+<li>id_rsa.pub文件是公钥，可以用于发送到其他服务器，或者git上</li>
+</ul>
+<p>3） 设置ssh无密码访问git仓库</p>
+<pre><code class="language-shell"> cat id_rsa.pub
+</code></pre>
+<p>复制字符串 到网站添加</p>
+<p>以github为例，找到个人主页，点击[settings],找到[SSH and GPG keys] ，新建SSH keys,将本地id_rsa.pub的内容复制到key里面，tittle可以随便填写，这样就配置好了。</p>
 
-2）没有id_rsa 和 id_rsa.pub则生成
-ssh-keygen -t rsa -C &amp;quot;your_email@youremail.com&amp;quot;
-
-执行完ssh-keygen之后会在，用户目录下的.ssh文件下，生成一个id_rsa文件和id_rsa.pub文件。
-
-id_rsa文件是私钥，要保存好，放在本地，私钥可以生产公钥，反之不行。
-id_rsa.pub文件是公钥，可以用于发送到其他服务器，或者git上
-
-3） 设置ssh无密码访问git仓库
- cat id_rsa.pub
-
-复制字符串 到网站添加
-以github为例，找到个人主页，点击[settings],找到[SSH and GPG keys] ，新建SSH keys,将本地id_rsa.pub的内容复制到key里面，tittle可以随便填写，这样就配置好了。
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="https://yinengmr.github.io/post/git-ssh-key/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-                <!-- 翻页 -->
-                
-                </div>
-                <!--  -->
-                <div class="main-container-middle"></div>
-                <!--  -->
-                <div id="sidebar" class="main-container-right">
-
-                    <!-- 个人信息 -->
+                                </div>
+                    </article>
+                    <!--  -->
                     
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                                <!-- id-card -->
+                                
     <div class="id_card i-card">
         <div class="id_card-avatar" style="background-image: url(https://yinengmr.github.io//images/avatar.png?v=1586784614885)">
         </div>
@@ -238,13 +195,14 @@ id_rsa.pub文件是公钥，可以用于发送到其他服务器，或者git上
         </div>
     </div>
     
-
-                        <!-- 公告栏 -->
-                        
+                                    
 
                 </div>
-            </div>
 
+
+
+
+            </div>
 
 
             <div class="site-footer">
@@ -256,6 +214,7 @@ id_rsa.pub文件是公钥，可以用于发送到其他服务器，或者git上
   hljs.initHighlightingOnLoad()
 </script>
 
+
     </div>
     <script>
         $('#sidebar').stickySidebar({
@@ -263,6 +222,27 @@ id_rsa.pub文件是公钥，可以用于发送到其他服务器，或者git上
             // bottomSpacing: 60
         });
     </script>
+    
+        
+            <script>
+    window.onload = function() {
+        var gitalk = new Gitalk({
+            clientID: '2d5ac84cba1978997c57',
+            clientSecret: 'dae031973aed81d918dbeb49e5a8ab3b99ed2226',
+            repo: 'Yinengmr.github.io',
+            owner: 'Yinengmr',
+            admin: ['Yinengmr'],
+            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+            distractionFreeMode: false // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    }
+</script>
+                
+
+                    
+                                
 </body>
 
 </html>

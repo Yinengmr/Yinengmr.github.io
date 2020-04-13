@@ -5,7 +5,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    重学前端 | Danny的博客
+    Ubuntu18.04 以及常用软件的安装 | Danny的博客
 </title>
 <link rel="shortcut icon" href="https://yinengmr.github.io//favicon.ico?v=1586784614885">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
@@ -114,69 +114,112 @@
                 <div id="content" class="main-container-left">
                     <article class="post i-card">
                         <h2 class="post-title">
-                            重学前端
+                            Ubuntu18.04 以及常用软件的安装
                         </h2>
                         <div class="post-info">
-                            <time class="post-time">2019-10-28</time>
+                            <time class="post-time">2020-04-13</time>
                             
+                                <a href="https://yinengmr.github.io/tag/lp286Yw87/" class="post-tag i-tag
+                            i-tag-error">
+                            #linux
+                        </a>
+                                
                         </div>
                         
+                            <div class="post-feature-image" style="background-image: url('https://yinengmr.github.io//post-images/ubuntu-cao-zuo-zhi-nan.jpg')"></div>
+                            
                                 <div class="post-content">
-                                    <p>这两年一直零散的学习，前端后端不定时的切换，有利也有弊，前端方面一直在做pc端相关的，却忽略了移动端，事实上人们更多的在使用移动设备，因此打算从移动端角度重学前端</p>
-<h2 id="-more-1移动端的touch事件"><!-- more --><br>
-1.移动端的<code>touch</code>事件</h2>
-<pre><code class="language-js">/*单击操作的特点
-* 1.单击只有一根手指
-* 2.判断手指开始触摸和手指松开的时间差异不能大于指定的值  300/150
-* 3.保证没有滑动操作，如果有抖动必须保证抖动的距离在指定范围内*/
-var div=document.querySelector(&quot;div&quot;);
-
-var startTime,startX,startY;
-div.addEventListener(&quot;touchstart&quot;,function(e){
-    /*判断是否只有一根手指进行操作*/
-    if(e.targetTouches.length &gt; 1){ //说明不止一个手指
-        return;
-    }
-    /*记录手指开始触摸的时间*/
-    startTime=Date.now();
-    /*记录当前手指的坐标*/
-    startX= e.targetTouches[0].clientX;
-    startY= e.targetTouches[0].clientY;
-    /*来做一些与事件相关的初始化操作*/
-})
-
-/*添加手指滑动事件，当手指在屏幕上滑动时触发:move事件是持续触发*/
-div.addEventListener(&quot;touchmove&quot;,function(){
-    console.log(&quot;touchmove&quot;);
-});
-
-/*touchend：当手指松开时候触发，意味着当前元素上已经没有手指对象了,
-所以无法通过targetTouches来获取手指对象*/
-div.addEventListener(&quot;touchend&quot;,function(e){
-    /*判断是否只有一根手指进行操作*/
-    if(e.changedTouches.length &gt; 1){ //说明不止一个手指
-        return;
-    }
-    /*判断时间差异  150ms*/
-    console.log(Date.now()-startTime);
-    if(Date.now()-startTime &gt; 150){ //长按操作
-        return;
-    }
-    /*判断松开手指时的坐标与触摸开始时的坐标的距离差异*/
-    var endX=e.changedTouches[0].clientX;
-    var endY=e.changedTouches[0].clientY;
-    /*这里暂且将距离差异定为6*/
-    if(Math.abs(endX-startX) &lt; 6 &amp;&amp; Math.abs(endY-startY) &lt;6){
-        console.log(&quot;这就是移动端的单击事件--tap事件&quot;);
-        /*执行tap事件响应后的处理操作*/
-    }
-})
-
-/*添加触摸意外中断事件*/
-div.addEventListener(&quot;touchcancel&quot;,function(){
-
-});
-</code></pre>
+                                    <h1 id="linux-简介">Linux 简介</h1>
+<p>Linux 内核最初只是由芬兰人林纳斯·托瓦兹（Linus Torvalds）在赫尔辛基大学上学时出于个人爱好而编写的。</p>
+<p>Linux 是一套免费使用和自由传播的类 Unix 操作系统，是一个基于 POSIX 和 UNIX 的多用户、多任务、支持多线程和多 CPU 的操作系统。</p>
+<p>Linux 能运行主要的 UNIX 工具软件、应用程序和网络协议。它支持 32 位和 64 位硬件。Linux 继承了 Unix 以网络为核心的设计思想，是一个性能稳定的多用户网络操作系统。</p>
+<!-- more -->
+<p><strong>篇幅限制这里不做过多讲述</strong>  更多请移步 <a href="https://www.runoob.com/linux/linux-intro.html">菜鸟教程 Linux 简介</a></p>
+<h2 id="如何选取适合自己的操作系统">如何选取适合自己的操作系统</h2>
+<p>写在前面：程序开发选择ubuntu没毛病 一般办公人员如果也想体验Linux 那我不太推荐ubuntu Deepin系统更适合非程序员 它包含了所有您需要的应用程序，网页浏览器、幻灯片演示、文档编辑、电子表格、娱乐、声音和图片处理软件，即时通讯软件等等 无需费力的进行各类软件安装，它自带的图形界面足以满足非程序员的日常使用，使得非程序员无非花费太大成本即可开箱即用，据说四月中下旬即将发布v20版本</p>
+<h1 id="ubuntu1804安装">ubuntu18.04安装</h1>
+<p>1）ubuntu18.04  <a href="https://developer.aliyun.com/mirror/">点击下载</a><br>
+2）安装工具：UltraISO（软碟通）（<a href="https://cn.ultraiso.net/xiazai.html">点击下载</a>）<br>
+3）准备U盘（最好是支持USB3.0，8G或以上，备份或者清空里面的文件）<br>
+4）制作启动盘</p>
+<p>插入U盘使用UltraISO将镜像写入U盘</p>
+<p>选择菜单选取镜像文件 点击文件-&gt;打开</p>
+<figure data-type="image" tabindex="1"><img src="https://yinengmr.github.io//post-images/1586777092061.png" alt="" loading="lazy"></figure>
+<p>选取文件后界面如下</p>
+<figure data-type="image" tabindex="2"><img src="https://yinengmr.github.io//post-images/1586777118609.png" alt="" loading="lazy"></figure>
+<p>菜单点击启动写入磁盘映像<br>
+<img src="https://yinengmr.github.io//post-images/1586778507145.png" alt="" loading="lazy"></p>
+<figure data-type="image" tabindex="3"><img src="https://yinengmr.github.io//post-images/1586778406610.jpg" alt="" loading="lazy"></figure>
+<p>如果此时点入外接多个U盘 请核对磁盘符 我这里是 H盘8G</p>
+<p>一般写入方式默认为USB-HDD+ 无需更改</p>
+<p>点击写入</p>
+<p>等看到界面的消息栏中出现刻录成功的日志就说明镜像写入完成，至此启动盘制作完成！</p>
+<h2 id="以下代办-">以下代办-----------------------------------</h2>
+<p>5）系统安装</p>
+<p>A win+ubuntu双系统</p>
+<p>B ubuntu 单系统<br>
+Linux不同于win系统 它没有磁盘符概念（win中c盘 d盘），</p>
+<h2 id="切换软件源">切换软件源</h2>
+<h2 id="常用操作">常用操作</h2>
+<ul>
+<li>终端介绍</li>
+</ul>
+<blockquote>
+<p>命令行提示符<br>
+user@ubuntu:~$ 为命令提示符， @ 之前的部分为当前用户ID， @ 与 : 之间的部分，为您的主机名称， : 与 $ 之间的部分，为当前的路径。</p>
+</blockquote>
+<ul>
+<li>apt 包管理器</li>
+</ul>
+<blockquote>
+<p>sudo apt update</p>
+</blockquote>
+<ul>
+<li>
+<p>vim使用教程</p>
+</li>
+<li>
+<p>搜狗输入法安装</p>
+</li>
+<li>
+<p>vscode安装</p>
+</li>
+<li>
+<p>openssh的使用</p>
+</li>
+<li>
+<p>文件操作</p>
+</li>
+<li>
+<p>创建 复制 移动 重命名 删除 权限设置</p>
+</li>
+<li>
+<p>远程登录ssh</p>
+</li>
+<li>
+<p>远程桌面</p>
+</li>
+<li>
+<p>git安装以及配置公钥<br>
+<a href="/post/git-ssh-key/">git 本地秘钥配置</a></p>
+</li>
+<li>
+<p>git命令</p>
+</li>
+</ul>
+<h1 id="deepin-安装">deepin 安装</h1>
+<ul>
+<li>同ubuntu安装 下载镜像 制作U盘启动盘输入系统即可</li>
+<li><a href="https://www.deepin.org/installation/">官方安装教程 内有视频教程</a></li>
+</ul>
+<h2 id="linux-推荐书籍">Linux 推荐书籍</h2>
+<ul>
+<li>[菜鸟推荐]<code>《鸟哥的 Linux 私房菜-基础篇·第三版》</code>by 鸟哥  豆瓣评分: 9.1</li>
+<li>[图灵程序设计丛书]<code>《Linux命令行与shell编程大全第三版》</code></li>
+<li>[进阶推荐]<code>《The Linux Command Line》</code> by William E. Shotts Jr.</li>
+<li>[高级推荐]<code>《深入理解 Linux 内核》</code> by Daniel P.Bovet / Marco Cesati</li>
+<li>[高级推荐]<code>《Linux/UNIX系统编程手册》</code> by Michael Kerrisk</li>
+</ul>
 
                                 </div>
                     </article>
@@ -184,9 +227,9 @@ div.addEventListener(&quot;touchcancel&quot;,function(){
                     
                         <div class="next-post">
                             <div class="next">下一篇</div>
-                            <a href="https://yinengmr.github.io/post/2019-10-10-001/">
+                            <a href="https://yinengmr.github.io/post/guo-nei-jia-su-fang-wen-github/">
                                 <h3 class="post-title">
-                                    [搬运][译] 作为程序员你不能成功的 10 个迹象
+                                    国内加速访问 GitHub
                                 </h3>
                             </a>
                         </div>
@@ -205,10 +248,21 @@ div.addEventListener(&quot;touchcancel&quot;,function(){
         <div class="toc-title i-card-title">目录</div>
         <div class="toc-content">
             <ul class="markdownIt-TOC">
-<li>
+<li><a href="#linux-%E7%AE%80%E4%BB%8B">Linux 简介</a>
 <ul>
-<li><a href="#-more-1%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%9A%84touch%E4%BA%8B%E4%BB%B6"><!-- more --><br>
-1.移动端的<code>touch</code>事件</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E9%80%89%E5%8F%96%E9%80%82%E5%90%88%E8%87%AA%E5%B7%B1%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">如何选取适合自己的操作系统</a></li>
+</ul>
+</li>
+<li><a href="#ubuntu1804%E5%AE%89%E8%A3%85">ubuntu18.04安装</a>
+<ul>
+<li><a href="#%E4%BB%A5%E4%B8%8B%E4%BB%A3%E5%8A%9E-">以下代办-----------------------------------</a></li>
+<li><a href="#%E5%88%87%E6%8D%A2%E8%BD%AF%E4%BB%B6%E6%BA%90">切换软件源</a></li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C">常用操作</a></li>
+</ul>
+</li>
+<li><a href="#deepin-%E5%AE%89%E8%A3%85">deepin 安装</a>
+<ul>
+<li><a href="#linux-%E6%8E%A8%E8%8D%90%E4%B9%A6%E7%B1%8D">Linux 推荐书籍</a></li>
 </ul>
 </li>
 </ul>
