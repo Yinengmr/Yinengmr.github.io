@@ -7,7 +7,7 @@
 <title>
     Ubuntu18.04 以及常用软件的安装 | Danny的博客
 </title>
-<link rel="shortcut icon" href="https://yinengmr.github.io//favicon.ico?v=1586784794938">
+<link rel="shortcut icon" href="https://yinengmr.github.io//favicon.ico?v=1586853167454">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -35,7 +35,7 @@
     <div class="nav">
         <div class="logo">
             <a href="https://yinengmr.github.io/">
-                <img class="avatar" src="https://yinengmr.github.io//images/avatar.png?v=1586784794938" alt="">
+                <img class="avatar" src="https://yinengmr.github.io//images/avatar.png?v=1586853167454" alt="">
             </a>
             <div class="site-title">
                 <h1>
@@ -120,7 +120,7 @@
                             <time class="post-time">2020-04-13</time>
                             
                                 <a href="https://yinengmr.github.io/tag/lp286Yw87/" class="post-tag i-tag
-                            i-tag-error">
+                            i-tag-">
                             #linux
                         </a>
                                 
@@ -136,7 +136,7 @@
 <!-- more -->
 <p><strong>篇幅限制这里不做过多讲述</strong>  更多请移步 <a href="https://www.runoob.com/linux/linux-intro.html">菜鸟教程 Linux 简介</a></p>
 <h2 id="如何选取适合自己的操作系统">如何选取适合自己的操作系统</h2>
-<p>写在前面：程序开发选择ubuntu没毛病 一般办公人员如果也想体验Linux 那我不太推荐ubuntu Deepin系统更适合非程序员 它包含了所有您需要的应用程序，网页浏览器、幻灯片演示、文档编辑、电子表格、娱乐、声音和图片处理软件，即时通讯软件等等 无需费力的进行各类软件安装，它自带的图形界面足以满足非程序员的日常使用，使得非程序员无非花费太大成本即可开箱即用，据说四月中下旬即将发布v20版本</p>
+<p>程序开发选择ubuntu没毛病 一般办公人员如果也想体验Linux 那我不太推荐ubuntu Deepin系统更适合非程序员 它包含了所有您需要的应用程序，网页浏览器、幻灯片演示、文档编辑、电子表格、娱乐、声音和图片处理软件，即时通讯软件等等 无需费力的进行各类软件安装，它自带的图形界面足以满足非程序员的日常使用，使得非程序员无非花费太大成本即可开箱即用，据说四月中下旬即将发布v20版本</p>
 <h1 id="ubuntu1804安装">ubuntu18.04安装</h1>
 <p>1）ubuntu18.04  <a href="https://developer.aliyun.com/mirror/">点击下载</a><br>
 2）安装工具：UltraISO（软碟通）（<a href="https://cn.ultraiso.net/xiazai.html">点击下载</a>）<br>
@@ -160,27 +160,127 @@
 <p>B ubuntu 单系统<br>
 Linux不同于win系统 它没有磁盘符概念（win中c盘 d盘），</p>
 <h2 id="切换软件源">切换软件源</h2>
+<p>有时要用apt-get安装软件或依赖库，因为网络连接的问题会碰到找不到软件包失败的情况，这时可以将软件源更换为国内源，大部分同类问题就可以解决掉了。</p>
+<p>这里主要介绍命令行下切换软件源，图形界面不做介绍</p>
+<p>国内有很多Ubuntu的镜像源，包括阿里的、网易的，还有很多教育网的源，比如：清华源、中科大源。<br>
+我们这里以清华源为例讲解如何修改Ubuntu 18.04里面默认的源。</p>
+<p>1、输入命令修改sources.list文件，当然需要超级权限，所以要加sudo；</p>
+<p>操作前请做好相应备份</p>
+<blockquote>
+<p>cp /etc/apt/sources.list /etc/apt/sources.list.bak<br>
+sudo gedit /etc/apt/sources.list</p>
+</blockquote>
+<p>编辑/etc/apt/sources.list文件</p>
+<p>2、在文件最前面添加以下条目：</p>
+<pre><code>deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+</code></pre>
+<p>修改完成后，保存文件，警告什么的都不理，然后运行下面的命令。</p>
+<blockquote>
+<p>sudo apt-get update  # 刷新存储库索引<br>
+sudo apt-get upgrade   # 升级所有可升级的软件包</p>
+</blockquote>
+<p>到此完成国内源更新</p>
 <h2 id="常用操作">常用操作</h2>
 <ul>
-<li>终端介绍</li>
+<li>终端（命令行）介绍</li>
 </ul>
 <blockquote>
 <p>命令行提示符<br>
-user@ubuntu:~$ 为命令提示符， @ 之前的部分为当前用户ID， @ 与 : 之间的部分，为您的主机名称， : 与 $ 之间的部分，为当前的路径。</p>
+<code>user@ubuntu:~$</code> 为命令提示符，<br>
+@ 之前的部分为当前用户ID，<br>
+@ 与 : 之间的部分，为您的主机名称，<br>
+: 与 $ 之间的部分，为当前的路径。</p>
 </blockquote>
 <ul>
-<li>apt 包管理器</li>
+<li>apt 包管理器 apt介绍与使用</li>
 </ul>
-<blockquote>
-<p>sudo apt update</p>
-</blockquote>
+<p>apt 和 apt-get 推荐使用apt</p>
+<table>
+<thead>
+<tr>
+<th>apt命令</th>
+<th>兼容命令</th>
+<th>命令的功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>apt install</td>
+<td>apt-get install</td>
+<td>安装软件包</td>
+</tr>
+<tr>
+<td>apt remove</td>
+<td>apt-get remove</td>
+<td>移除软件包</td>
+</tr>
+<tr>
+<td>apt purge</td>
+<td>apt-get purge</td>
+<td>移除软件包及配置文件</td>
+</tr>
+<tr>
+<td>apt update</td>
+<td>apt-get update</td>
+<td>刷新存储库索引</td>
+</tr>
+<tr>
+<td>apt upgrade</td>
+<td>apt-get upgrade</td>
+<td>升级所有可升级的软件包</td>
+</tr>
+<tr>
+<td>apt autoremove</td>
+<td>apt-get autoremove</td>
+<td>自动删除不需要的包</td>
+</tr>
+<tr>
+<td>apt full-upgrade</td>
+<td>apt-get dist-upgrade</td>
+<td>在升级软件包时自动处理依赖关系</td>
+</tr>
+<tr>
+<td>apt search</td>
+<td>apt-cache search</td>
+<td>搜索应用程序</td>
+</tr>
+<tr>
+<td>apt show</td>
+<td>apt-cache show</td>
+<td>显示安装细节</td>
+</tr>
+<tr>
+<td>apt list</td>
+<td></td>
+<td>列出包含条件的包（已安装，可升级等）</td>
+</tr>
+<tr>
+<td>apt edit-sources</td>
+<td></td>
+<td>编辑源列表</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vim使用教程">vim使用教程</h2>
+<h2 id="输入法">输入法</h2>
+<p>内置的输入使用起来不尽人意 所以推荐使用搜狗输入法</p>
+<h4 id="搜狗输入法下载连接"><a href="https://pinyin.sogou.com/linux/?r=pinyin">搜狗输入法下载连接</a></h4>
+<h4 id="搜狗输入法安装指南"><a href="https://pinyin.sogou.com/linux/help.php">搜狗输入法安装指南</a></h4>
+<p>官网下载的安装包是.deb的文件 可以双击文件进行安装</p>
+<p>命令行操作如下</p>
+<pre><code class="language-shell">cd Download
+sudo dpkg -i sogoupinyin_2.1.0.0086_i386.deb
+</code></pre>
 <ul>
-<li>
-<p>vim使用教程</p>
-</li>
-<li>
-<p>搜狗输入法安装</p>
-</li>
 <li>
 <p>vscode安装</p>
 </li>
@@ -258,6 +358,14 @@ user@ubuntu:~$ 为命令提示符， @ 之前的部分为当前用户ID， @ 与
 <li><a href="#%E4%BB%A5%E4%B8%8B%E4%BB%A3%E5%8A%9E-">以下代办-----------------------------------</a></li>
 <li><a href="#%E5%88%87%E6%8D%A2%E8%BD%AF%E4%BB%B6%E6%BA%90">切换软件源</a></li>
 <li><a href="#%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C">常用操作</a></li>
+<li><a href="#vim%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">vim使用教程</a></li>
+<li><a href="#%E8%BE%93%E5%85%A5%E6%B3%95">输入法</a><br>
+*
+<ul>
+<li><a href="#%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E4%B8%8B%E8%BD%BD%E8%BF%9E%E6%8E%A5">搜狗输入法下载连接</a></li>
+<li><a href="#%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97">搜狗输入法安装指南</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#deepin-%E5%AE%89%E8%A3%85">deepin 安装</a>
