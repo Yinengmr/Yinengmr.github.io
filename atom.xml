@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yinengmr.github.io/</id>
     <title>Danny的博客</title>
-    <updated>2020-04-14T08:32:52.227Z</updated>
+    <updated>2020-04-14T09:13:01.920Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yinengmr.github.io/"/>
     <link rel="self" href="https://yinengmr.github.io/atom.xml"/>
@@ -173,9 +173,13 @@ sudo apt-get upgrade   # 升级所有可升级的软件包</p>
 sudo dpkg -i sogoupinyin_2.1.0.0086_i386.deb
 </code></pre>
 <ul>
-<li>
-<p>vscode安装</p>
-</li>
+<li>vscode安装</li>
+</ul>
+<ol>
+<li><a href="https://code.visualstudio.com/">vscode 下载</a></li>
+<li>快捷键插件</li>
+</ol>
+<ul>
 <li>
 <p>openssh的使用</p>
 </li>
@@ -192,11 +196,16 @@ sudo dpkg -i sogoupinyin_2.1.0.0086_i386.deb
 <p>远程桌面</p>
 </li>
 <li>
-<p>git安装以及配置公钥<br>
-<a href="/post/git-ssh-key/">git 本地秘钥配置</a></p>
+<p><strong>git安装以及配置公钥</strong></p>
+<pre><code>sudo apt install git
+</code></pre>
+<p>使用git --version 检查一下</p>
 </li>
 <li>
-<p>git命令</p>
+<p><strong>还不会使用git的可以去看阮一峰git教程 <a href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html">常用 Git 命令清单</a></strong></p>
+</li>
+<li>
+<p><strong>公钥配置 <a href="/post/git-ssh-key/">git 本地秘钥配置</a></strong></p>
 </li>
 </ul>
 <h1 id="deepin-安装">deepin 安装</h1>
