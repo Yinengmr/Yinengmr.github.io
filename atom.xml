@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yinengmr.github.io/</id>
     <title>Danny的博客</title>
-    <updated>2020-04-15T07:21:33.191Z</updated>
+    <updated>2020-04-15T08:14:32.566Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yinengmr.github.io/"/>
     <link rel="self" href="https://yinengmr.github.io/atom.xml"/>
@@ -217,6 +217,7 @@ sudo dpkg -i sogoupinyin_2.1.0.0086_i386.deb
 ②  选择代码片段或创建代码片段（可以对现有的进行修改，也可以新建代码片段）</p>
 </blockquote>
 </blockquote>
+<figure data-type="image" tabindex="4"><img src="https://yinengmr.github.io//post-images/1586938085776.png" alt="" loading="lazy"></figure>
 <blockquote>
 <p><strong>代码片段分两种：</strong></p>
 <blockquote>
@@ -224,6 +225,46 @@ sudo dpkg -i sogoupinyin_2.1.0.0086_i386.deb
 ② 对应语言的局部代码片段（只能在对应语言环境下才能触发），新建全局代码片段会在 snippets 目录下生成 .code-snippets 为后缀的配置文件，而新建对应语言的代码片段会生成 对应语言 + .json 的配置文件。</p>
 </blockquote>
 </blockquote>
+<p>javascript.json  javascript 自定义代码块片段</p>
+<pre><code class="language-javascript">{
+	&quot;Print to console&quot;: {
+		&quot;prefix&quot;: &quot;js:start&quot;,
+		&quot;body&quot;: [
+			&quot;;(function(KK){&quot;,
+			&quot;    var _this = null;&quot;,
+			&quot;    KK.$1 = KK.$1 || {};&quot;,
+			&quot;    _this = KK.$1 = {&quot;,
+			&quot;        Main: {&quot;,
+			&quot;            data:function(){&quot;,
+			&quot;                return {&quot;,
+			&quot;                }&quot;,
+			&quot;            },&quot;,
+			&quot;            methods:{&quot;,
+			&quot;  &quot;,
+			&quot;            },&quot;,
+			&quot;            created:function(){&quot;,
+			&quot;                console.log(123);&quot;,
+			&quot;            }&quot;,
+			&quot;        },&quot;,
+			&quot;        init: function() {&quot;,
+			&quot;            // iview.lang(\&quot;zh-TW\&quot;);&quot;,
+			&quot;            var Component = Vue.extend(_this.Main);&quot;,
+			&quot;            new Component().$mount('#app');&quot;,
+			&quot;        },&quot;,
+			&quot;    }&quot;,
+			&quot;&quot;,
+			&quot;})(APP)&quot;,
+			&quot;;(function(){&quot;,
+			&quot;    APP.$1.init();&quot;,
+			&quot;})()&quot;
+		],
+		&quot;description&quot;: &quot;快速构建vuejs架构&quot;
+	}
+}
+
+</code></pre>
+<p>使用代码块</p>
+<figure data-type="image" tabindex="5"><img src="https://yinengmr.github.io//post-images/1586938410538.png" alt="" loading="lazy"></figure>
 <h1 id="deepin-安装">deepin 安装</h1>
 <ul>
 <li>同ubuntu安装 下载镜像 制作U盘启动盘输入系统即可</li>
