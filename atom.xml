@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yinengmr.github.io/</id>
     <title>Danny的博客</title>
-    <updated>2020-04-15T07:03:23.806Z</updated>
+    <updated>2020-04-15T07:21:33.191Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yinengmr.github.io/"/>
     <link rel="self" href="https://yinengmr.github.io/atom.xml"/>
@@ -210,14 +210,20 @@ sudo dpkg -i sogoupinyin_2.1.0.0086_i386.deb
 <li>插件搜索和安装<br>
 <img src="https://yinengmr.github.io//post-images/1586931833501.png" alt="" loading="lazy"></li>
 </ol>
+<blockquote>
 <p><strong>自定义代码块</strong></p>
-<blockquote></blockquote>
+<blockquote>
 <p>①  依次点击 文件 &gt; 首选项 &gt; 用户代码片段<br>
 ②  选择代码片段或创建代码片段（可以对现有的进行修改，也可以新建代码片段）</p>
+</blockquote>
+</blockquote>
+<blockquote>
 <p><strong>代码片段分两种：</strong></p>
-<blockquote></blockquote>
+<blockquote>
 <p>① 全局代码片段（每种语言环境下都能触发代码块）。<br>
 ② 对应语言的局部代码片段（只能在对应语言环境下才能触发），新建全局代码片段会在 snippets 目录下生成 .code-snippets 为后缀的配置文件，而新建对应语言的代码片段会生成 对应语言 + .json 的配置文件。</p>
+</blockquote>
+</blockquote>
 <h1 id="deepin-安装">deepin 安装</h1>
 <ul>
 <li>同ubuntu安装 下载镜像 制作U盘启动盘输入系统即可</li>
