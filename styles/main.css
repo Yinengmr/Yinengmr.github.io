@@ -1980,10 +1980,10 @@ blockquote {
   font-weight: bold;
 }
 body {
-      background-color: #212529;
+      background-color: #e9ecef;
     }
     .nav-toggle .line {
-      background-color: #212529 !important;
+      background-color: #e9ecef !important;
     }.header {
         width: 960px;
         margin: 0 auto;
@@ -2111,5 +2111,5 @@ body {
     .mist .site-title i {
       background: #FFFFFFfe;
     }.box-shadow-wrapper {
-      box-shadow: none !important;
+      padding: 10px;
     }
