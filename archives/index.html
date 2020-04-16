@@ -8,7 +8,7 @@
 <meta name="description" content="学习是一生的事情">
 <meta name="theme-color" content="#000">
 <title>Danny的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1586942858252">
+<link rel="shortcut icon" href="/favicon.ico?v=1586997103918">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -51,8 +51,6 @@
             </a>  
           
         </div>
-        
-          <p class="subtitle">精于心，简于形</p>
         
       </div>
       <nav class="site-nav" id="site_nav">
@@ -177,10 +175,27 @@
   </div>
   
     
-      <div class="sidebar-item" style="border-top: 1px dotted #ccc; margin-top: 10px;">
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="https://yinengmr.github.io//atom.xml" target="_blank">RSS</a>
+        </span>
       </div>
     
   
+  
+    <div class="sidebar-item sidebar-item-social">
+      <div class="social-item">
+        
+          
+            <a href="https://github.com/Yinengmr/">
+              <i class="fa fa-github" title="github"></i>
+            </a>
+          
+        
+        
+      </div>
+    </div>
   
 
   
@@ -359,7 +374,7 @@
 
 <link rel="stylesheet" href="/media/live2d/histoire/css/live2d.css" />
 <div class="box-scale">
-  <div id="landlord" style="left: 5px;bottom: px;" data-key="">
+  <div id="landlord" style="left: 5px;bottom: 50px;" data-key="">
     <div class="message" style="opacity:0"></div>
     <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
     <div class="live_talk_input_body">
@@ -395,6 +410,53 @@ var apiKey = landlord.dataset.key;
 <script type="text/javascript" src="/media/live2d/histoire/js/live2d.js"></script>
 <script type="text/javascript" src="/media/live2d/histoire/js/message.js"></script>
   
+  
+    
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+  <div class="aplayer" id="aplayer"></div>
+  <input hidden id="player_cover" value="\media\images\custom-cover.jpg" />
+  <div class="music-list">
+  
+    
+    <input hidden value="倚栏听风,郑国锋,http://music.163.com/song/media/outer/url?id=31273502.mp3," />
+  
+    
+    <input hidden value="赤岭,染lafier,http://music.163.com/song/media/outer/url?id=http://music.163.com/song/media/outer/url?id=447925558.mp3.mp3," />
+  
+    
+    <input hidden value="伽罗,S.E.N.S.,http://music.163.com/song/media/outer/url?id=http://music.163.com/song/media/outer/url?id=447925558.mp3.mp3," />
+  
+    
+    <input hidden value="Arrogant Angel,W4U,http://music.163.com/song/media/outer/url?id=http://music.163.com/song/media/outer/url?id=447925558.mp3.mp3," />
+  
+  </div>
+  <script>
+  let musics = document.querySelector('.music-list').children;
+  let mediaMusic = [];
+  let cover = document.querySelector('#player_cover').value;
+  for (let i = 0; i < musics.length; i++) {
+    let item = musics[i];
+    let splits = item.value.split(',');
+    mediaMusic.push({
+      name: splits[0],
+      artist: splits[1],
+      url: splits[2],
+      lrc: splits[3],
+      cover: cover
+    });
+  }
+  const ap = new APlayer({
+      container: document.getElementById('aplayer'),
+      fixed: true,
+      lrcType: 3,
+      listFolded: false,
+      listMaxHeight: 90,
+      audio: mediaMusic
+  });
+  </script>
+
+
   
 </div>
 <script>
@@ -528,7 +590,7 @@ var apiKey = landlord.dataset.key;
   }
 
   // 链接跳转
-  let newWindow = 'false'
+  let newWindow = 'true'
   if (newWindow === 'true') {
     let links = document.querySelectorAll('.post-body a')
     links.forEach(item => {

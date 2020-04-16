@@ -2112,4 +2112,6 @@ body {
       background: #FFFFFFfe;
     }.box-shadow-wrapper {
       padding: 10px;
+    }.box-shadow-wrapper {
+      box-shadow: none !important;
     }
