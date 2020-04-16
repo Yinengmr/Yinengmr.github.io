@@ -8,7 +8,7 @@
 <meta name="description" content="学习是一生的事情">
 <meta name="theme-color" content="#000">
 <title>Ubuntu18.04 以及常用软件的安装 | Danny的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1586997893169">
+<link rel="shortcut icon" href="/favicon.ico?v=1587021630375">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -231,8 +231,15 @@
 </li>
 <li><a href="#ubuntu1804%E5%AE%89%E8%A3%85">ubuntu18.04安装</a>
 <ul>
+<li><a href="#%E6%8C%89%E7%85%A7%E7%94%B5%E8%84%91%E5%93%81%E7%89%8C%E5%88%86%E7%B1%BB">按照电脑品牌分类</a></li>
+<li><a href="#%E6%8C%89%E7%85%A7%E4%B8%BB%E6%9D%BF%E5%93%81%E7%89%8C%E5%88%86%E7%B1%BB">按照主板品牌分类</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BB%8B%E7%BB%8D">终端（命令行）介绍</a></li>
+<li><a href="#apt-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8-apt%E4%BB%8B%E7%BB%8D%E4%B8%8E%E4%BD%BF%E7%94%A8">apt 包管理器 apt介绍与使用</a>
+<ul>
 <li><a href="#%E5%88%87%E6%8D%A2%E8%BD%AF%E4%BB%B6%E6%BA%90">切换软件源</a></li>
-<li><a href="#%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C">常用操作</a></li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7">常用软件工具</a></li>
 </ul>
 </li>
 <li><a href="#vim">vim</a></li>
@@ -536,12 +543,12 @@ window.addEventListener('load', function() {
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>8分钟</span>
+      <span>10分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1945<span class="pc-show">字数</span></span>
+      <span>2417<span class="pc-show">字数</span></span>
     </span>
     
   </div>
@@ -572,42 +579,105 @@ window.addEventListener('load', function() {
 <p>一般写入方式默认为USB-HDD+ 无需更改</p>
 <p>点击写入</p>
 <p>等看到界面的消息栏中出现刻录成功的日志就说明镜像写入完成，至此启动盘制作完成！</p>
-<p>5）系统安装</p>
-<p>Linux不同于win系统 它没有磁盘符概念（win中c盘 d盘），</p>
-<h2 id="切换软件源">切换软件源</h2>
-<p>有时要用apt-get安装软件或依赖库，因为网络连接的问题会碰到找不到软件包失败的情况，这时可以将软件源更换为国内源，大部分同类问题就可以解决掉了。</p>
-<p>这里主要介绍命令行下切换软件源，图形界面不作介绍</p>
-<p>国内有很多Ubuntu的镜像源，包括阿里的、网易的，华为云 ，还有很多教育网的源，比如：清华源、中科大源。<br>
-我们这里以清华源为例讲解如何修改Ubuntu 18.04里面默认的源。</p>
-<p>1、输入命令修改sources.list文件，当然需要超级权限，所以要加sudo；</p>
-<p>操作前请做好相应备份</p>
+<p>5）系统安装<br>
+关闭目标主机，然后插入U盘，开机迅速按F12 进入BIOS设置界面（不同的电脑进入 bios 的按键不同，一般为 F12 / ESC 或者 Delete 键）选择U盘启动 一般为EFI USB Devices 选项</p>
+<details><summary><b>各类电脑进入BIOS的方法</b></summary>
+<p>
+<h2 id="按照电脑品牌分类">按照电脑品牌分类</h2>
+<table>
+<thead>
+<tr>
+<th>电脑品牌</th>
+<th>键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ibm/thinkPad</td>
+<td>F1</td>
+</tr>
+<tr>
+<td>惠普/hp</td>
+<td>F2/F10</td>
+</tr>
+<tr>
+<td>索尼sony、戴尔Dell、弘基Acer</td>
+<td>F2</td>
+</tr>
+<tr>
+<td>华硕ASUS</td>
+<td>ESC/F2/F12</td>
+</tr>
+</tbody>
+</table>
+<h2 id="按照主板品牌分类">按照主板品牌分类</h2>
+<table>
+<thead>
+<tr>
+<th>主板品牌</th>
+<th>键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>华硕主板、盈通主板</td>
+<td>F8</td>
+</tr>
+<tr>
+<td>技嘉主板、inter主板、致铭主板</td>
+<td>F12</td>
+</tr>
+<tr>
+<td>微星主板、华擎主板、昂达主板</td>
+<td>F11</td>
+</tr>
+<tr>
+<td>映泰主板、冠名主板</td>
+<td>F9</td>
+</tr>
+<tr>
+<td>梅捷主板、<code>富士康主板</code></td>
+<td>ESC/F12</td>
+</tr>
+<tr>
+<td>七彩虹主板、精英主板</td>
+<td>ESC/F11</td>
+</tr>
+<tr>
+<td>斯巴达卡主板、双敏主板、铭瑄主板、捷波主板、磐正主板</td>
+<td>ESC</td>
+</tr>
+<tr>
+<td>顶星主板</td>
+<td>F11/F12</td>
+</tr>
+</tbody>
+</table>
+</p>
+</details>
+<!-- more -->
 <blockquote>
-<p>cp /etc/apt/sources.list /etc/apt/sources.list.bak<br>
-sudo gedit /etc/apt/sources.list</p>
+<p>正式安装</p>
+<blockquote>
+<p>至此我们就进入了安装程序 选择Install Ubuntu 回车直接安装</p>
+<p>选择语言 中文简体在倒数第三个 然后选择键盘布局后进入更新选项</p>
 </blockquote>
-<p>编辑/etc/apt/sources.list文件</p>
-<p>2、在文件最前面添加以下条目：</p>
-<pre><code>deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
-deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
-deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+</blockquote>
+<blockquote>
+<p>一般我们用仅仅用 Ubuntu 来编程或者部署项目，娱乐一般用 Windows, 所以选择 <strong>最小安装</strong><br>
+最下面的两个选项会拖慢安装的速度，这些工作可以放到安装完成后集中处理，所以也不勾选。</p>
+</blockquote>
+<figure data-type="image" tabindex="4"><img src="https://yinengmr.github.io//post-images/1587018424619.jpg" alt="" loading="lazy"></figure>
+<p>选择安装类型</p>
+<blockquote>
+<p>第一和第二个选项安装的时候更省事，安装程序会自动分区，最后一个选项需要自己手动分区，安装的时候会麻烦一点，但是因为是手动分区，你对系统的分区情况也更加熟悉，但是新手不建议这个选项</p>
+</blockquote>
+<figure data-type="image" tabindex="5"><img src="https://yinengmr.github.io//post-images/1587018604298.jpg" alt="" loading="lazy"></figure>
+<p>然后选择时区为上海 创建用户名后安装程序会安装一些必要的系统软件，安装过程会持续20到30分钟，完成后会弹出完成对话框点击重启即可</p>
+<p>至此Ubuntu18.04 安装完成！</p>
+<h1 id="终端命令行介绍">终端（命令行）介绍</h1>
+<pre><code class="language-bash">user@ubuntu:~$ 
 </code></pre>
-<p>修改完成后，保存文件，警告什么的都不理，然后运行下面的命令。</p>
-<blockquote>
-<p>sudo apt-get update  # 刷新存储库索引<br>
-sudo apt-get upgrade   # 升级所有可升级的软件包</p>
-</blockquote>
-<p>到此完成国内源更新</p>
-<h2 id="常用操作">常用操作</h2>
-<ul>
-<li>终端（命令行）介绍</li>
-</ul>
 <blockquote>
 <p>命令行提示符<br>
 <code>user@ubuntu:~$</code> 为命令提示符，<br>
@@ -615,10 +685,9 @@ sudo apt-get upgrade   # 升级所有可升级的软件包</p>
 @ 与 : 之间的部分，为您的主机名称，<br>
 : 与 $ 之间的部分，为当前的路径。</p>
 </blockquote>
-<ul>
-<li>apt 包管理器 apt介绍与使用</li>
-</ul>
-<p>apt 和 apt-get 推荐使用apt</p>
+<h1 id="apt-包管理器-apt介绍与使用">apt 包管理器 apt介绍与使用</h1>
+<details><summary><b>apt 和 apt-get 推荐使用apt </b></summary>
+<p>
 <table>
 <thead>
 <tr>
@@ -685,6 +754,38 @@ sudo apt-get upgrade   # 升级所有可升级的软件包</p>
 </tr>
 </tbody>
 </table>
+</p></details>
+<h2 id="切换软件源">切换软件源</h2>
+<p>有时要用apt-get安装软件或依赖库，因为网络连接的问题会碰到找不到软件包失败的情况，这时可以将软件源更换为国内源，大部分同类问题就可以解决掉了。</p>
+<p>这里主要介绍命令行下切换软件源，图形界面不作介绍</p>
+<p>国内有很多Ubuntu的镜像源，包括阿里的、网易的，华为云 ，还有很多教育网的源，比如：清华源、中科大源。<br>
+我们这里以清华源为例讲解如何修改Ubuntu 18.04里面默认的源。</p>
+<p>1、输入命令修改sources.list文件，当然需要超级权限，所以要加sudo；</p>
+<p>操作前请做好相应备份</p>
+<blockquote>
+<p>cp /etc/apt/sources.list /etc/apt/sources.list.bak<br>
+sudo gedit /etc/apt/sources.list</p>
+</blockquote>
+<p>编辑/etc/apt/sources.list文件</p>
+<p>2、在文件最前面添加以下条目：</p>
+<pre><code>deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+</code></pre>
+<p>修改完成后，保存文件，警告什么的都不理，然后运行下面的命令。</p>
+<blockquote>
+<p>sudo apt-get update  # 刷新存储库索引<br>
+sudo apt-get upgrade   # 升级所有可升级的软件包</p>
+</blockquote>
+<p>到此完成国内源更新</p>
+<h2 id="常用软件工具">常用软件工具</h2>
 <h1 id="vim">vim</h1>
 <p>Vim是从 vi（vi 是linux 内置文本编辑工具） 发展出来的一个文本编辑器。代码补完、编译及错误跳转等方便编程的功能特别丰富，在程序员中被广泛使用。</p>
 <blockquote>
@@ -701,19 +802,11 @@ sudo apt-get upgrade   # 升级所有可升级的软件包</p>
 sudo dpkg -i sogoupinyin_2.1.0.0086_i386.deb
 </code></pre>
 <h1 id="openssh的使用">openssh的使用</h1>
+<p>首先用apt命令安装</p>
+<pre><code class="language-bash">sudo apt install openssh-server
+</code></pre>
 <ul>
-<li>
-<p>文件操作</p>
-</li>
-<li>
-<p>创建 复制 移动 重命名 删除 权限设置</p>
-</li>
-<li>
-<p>远程桌面</p>
-</li>
-<li>
-<p><strong>git安装以及配置公钥</strong></p>
-</li>
+<li><strong>git安装以及配置公钥</strong></li>
 </ul>
 <pre><code class="language-shell">sudo apt install git
 </code></pre>
@@ -743,7 +836,7 @@ sudo dpkg -i sogoupinyin_2.1.0.0086_i386.deb
 ②  选择代码片段或创建代码片段（可以对现有的进行修改，也可以新建代码片段）</p>
 </blockquote>
 </blockquote>
-<figure data-type="image" tabindex="4"><img src="https://yinengmr.github.io//post-images/1586938085776.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://yinengmr.github.io//post-images/1586938085776.png" alt="" loading="lazy"></figure>
 <blockquote>
 <p><strong>代码片段分两种：</strong></p>
 <blockquote>
@@ -790,7 +883,7 @@ sudo dpkg -i sogoupinyin_2.1.0.0086_i386.deb
 
 </code></pre>
 <p>使用代码块</p>
-<figure data-type="image" tabindex="5"><img src="https://yinengmr.github.io//post-images/1586938410538.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://yinengmr.github.io//post-images/1586938410538.png" alt="" loading="lazy"></figure>
 <h1 id="deepin-安装">deepin 安装</h1>
 <ul>
 <li>同ubuntu安装 下载镜像 制作U盘启动盘输入系统即可</li>
