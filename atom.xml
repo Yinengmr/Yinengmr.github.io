@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yinengmr.github.io/</id>
     <title>Danny的博客</title>
-    <updated>2020-04-16T07:54:42.560Z</updated>
+    <updated>2020-04-16T08:08:11.576Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yinengmr.github.io/"/>
     <link rel="self" href="https://yinengmr.github.io/atom.xml"/>
@@ -285,7 +285,9 @@ sudo apt install openssh-client
 <p>使用ssh命令就可以在远程登陆主机了</p>
 <pre><code class="language-bash">ssh username@10.132.xxx
 </code></pre>
-<p>Linux轻量级桌面xfce</p>
+<p>Linux轻量级桌面xfce,低内存占用，提高系统响应速度</p>
+<pre><code class="language-bash">sudo apt install xfce4
+</code></pre>
 <ul>
 <li><strong>git安装以及配置公钥</strong></li>
 </ul>
