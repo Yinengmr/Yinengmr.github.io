@@ -8,7 +8,7 @@
 <meta name="description" content="学习是一生的事情">
 <meta name="theme-color" content="#000">
 <title>Ubuntu18.04 以及常用软件的安装 | Danny的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1587021630375">
+<link rel="shortcut icon" href="/favicon.ico?v=1587023677252">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -548,7 +548,7 @@ window.addEventListener('load', function() {
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>2417<span class="pc-show">字数</span></span>
+      <span>2482<span class="pc-show">字数</span></span>
     </span>
     
   </div>
@@ -685,6 +685,7 @@ window.addEventListener('load', function() {
 @ 与 : 之间的部分，为您的主机名称，<br>
 : 与 $ 之间的部分，为当前的路径。</p>
 </blockquote>
+<p>ubuntu 命令 <a href="https://www.jianshu.com/p/0f253188ab89">Ubuntu基本命令</a></p>
 <h1 id="apt-包管理器-apt介绍与使用">apt 包管理器 apt介绍与使用</h1>
 <details><summary><b>apt 和 apt-get 推荐使用apt </b></summary>
 <p>
@@ -804,7 +805,20 @@ sudo dpkg -i sogoupinyin_2.1.0.0086_i386.deb
 <h1 id="openssh的使用">openssh的使用</h1>
 <p>首先用apt命令安装</p>
 <pre><code class="language-bash">sudo apt install openssh-server
+sudo apt install openssh-client
 </code></pre>
+<p>启动服务</p>
+<pre><code class="language-bash">sudo service ssh start
+</code></pre>
+<p>查看服务状态</p>
+<pre><code class="language-bash">service ssh status
+* sshd is running
+</code></pre>
+<p>远程ssh登陆</p>
+<p>使用ssh命令就可以在远程登陆主机了</p>
+<pre><code class="language-bash">ssh username@10.132.xxx
+</code></pre>
+<p>Linux轻量级桌面xfce</p>
 <ul>
 <li><strong>git安装以及配置公钥</strong></li>
 </ul>

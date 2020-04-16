@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yinengmr.github.io/</id>
     <title>Danny的博客</title>
-    <updated>2020-04-16T07:30:10.311Z</updated>
+    <updated>2020-04-16T07:54:42.560Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yinengmr.github.io/"/>
     <link rel="self" href="https://yinengmr.github.io/atom.xml"/>
@@ -152,6 +152,7 @@
 @ 与 : 之间的部分，为您的主机名称，<br>
 : 与 $ 之间的部分，为当前的路径。</p>
 </blockquote>
+<p>ubuntu 命令 <a href="https://www.jianshu.com/p/0f253188ab89">Ubuntu基本命令</a></p>
 <h1 id="apt-包管理器-apt介绍与使用">apt 包管理器 apt介绍与使用</h1>
 <details><summary><b>apt 和 apt-get 推荐使用apt </b></summary>
 <p>
@@ -271,7 +272,20 @@ sudo dpkg -i sogoupinyin_2.1.0.0086_i386.deb
 <h1 id="openssh的使用">openssh的使用</h1>
 <p>首先用apt命令安装</p>
 <pre><code class="language-bash">sudo apt install openssh-server
+sudo apt install openssh-client
 </code></pre>
+<p>启动服务</p>
+<pre><code class="language-bash">sudo service ssh start
+</code></pre>
+<p>查看服务状态</p>
+<pre><code class="language-bash">service ssh status
+* sshd is running
+</code></pre>
+<p>远程ssh登陆</p>
+<p>使用ssh命令就可以在远程登陆主机了</p>
+<pre><code class="language-bash">ssh username@10.132.xxx
+</code></pre>
+<p>Linux轻量级桌面xfce</p>
 <ul>
 <li><strong>git安装以及配置公钥</strong></li>
 </ul>
