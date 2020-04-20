@@ -8,7 +8,7 @@
 <meta name="description" content="学习是一生的事情">
 <meta name="theme-color" content="#000">
 <title>Ubuntu18.04 以及常用软件的安装 | Danny的博客</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1587024486164">
+<link rel="shortcut icon" href="/favicon.ico?v=1587356574870">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -543,12 +543,12 @@ window.addEventListener('load', function() {
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>10分钟</span>
+      <span>11分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>2499<span class="pc-show">字数</span></span>
+      <span>2528<span class="pc-show">字数</span></span>
     </span>
     
   </div>
@@ -803,7 +803,7 @@ sudo apt-get upgrade   # 升级所有可升级的软件包</p>
 sudo dpkg -i sogoupinyin_2.1.0.0086_i386.deb
 </code></pre>
 <h1 id="openssh的使用">openssh的使用</h1>
-<p>首先用apt命令安装</p>
+<p>用apt命令安装openssh</p>
 <pre><code class="language-bash">sudo apt install openssh-server
 sudo apt install openssh-client
 </code></pre>
@@ -813,6 +813,16 @@ sudo apt install openssh-client
 <p>查看服务状态</p>
 <pre><code class="language-bash">service ssh status
 * sshd is running
+</code></pre>
+<p>防火墙设置</p>
+<ul>
+<li>开启防火墙</li>
+</ul>
+<pre><code class="language-bash">sudo apt install ufw
+sudo ufw enable
+</code></pre>
+<p>设置UFW 允许传入SSH链接</p>
+<pre><code class="language-bash">sudo ufw allow ssh
 </code></pre>
 <p>远程ssh登陆</p>
 <p>使用ssh命令就可以在远程登陆主机了</p>
