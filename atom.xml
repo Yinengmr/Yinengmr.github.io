@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yinengmr.github.io/</id>
     <title>Danny的博客</title>
-    <updated>2020-04-22T00:22:32.738Z</updated>
+    <updated>2020-04-22T00:39:39.425Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yinengmr.github.io/"/>
     <link rel="self" href="https://yinengmr.github.io/atom.xml"/>
@@ -19,13 +19,12 @@
         <summary type="html"><![CDATA[<h1 id="linux-简介">Linux 简介</h1>
 <p>Linux 内核最初只是由芬兰人林纳斯·托瓦兹（Linus Torvalds）在赫尔辛基大学上学时出于个人爱好而编写的。</p>
 <p>Linux 是一套免费使用和自由传播的类 Unix 操作系统，是一个基于 POSIX 和 UNIX 的多用户、多任务、支持多线程和多 CPU 的操作系统。</p>
-<p>Linux 能运行主要的 UNIX 工具软件、应用程序和网络协议。它支持 32 位和 64 位硬件。Linux 继承了 Unix 以网络为核心的设计思想，是一个性能稳定的多用户网络操作系统。</p>
 ]]></summary>
         <content type="html"><![CDATA[<h1 id="linux-简介">Linux 简介</h1>
 <p>Linux 内核最初只是由芬兰人林纳斯·托瓦兹（Linus Torvalds）在赫尔辛基大学上学时出于个人爱好而编写的。</p>
 <p>Linux 是一套免费使用和自由传播的类 Unix 操作系统，是一个基于 POSIX 和 UNIX 的多用户、多任务、支持多线程和多 CPU 的操作系统。</p>
-<p>Linux 能运行主要的 UNIX 工具软件、应用程序和网络协议。它支持 32 位和 64 位硬件。Linux 继承了 Unix 以网络为核心的设计思想，是一个性能稳定的多用户网络操作系统。</p>
 <!-- more -->
+<p>Linux 能运行主要的 UNIX 工具软件、应用程序和网络协议。它支持 32 位和 64 位硬件。Linux 继承了 Unix 以网络为核心的设计思想，是一个性能稳定的多用户网络操作系统。</p>
 <p><strong>篇幅限制这里不做过多讲述</strong>  更多请移步 <a href="https://www.runoob.com/linux/linux-intro.html">菜鸟教程 Linux 简介</a></p>
 <h2 id="如何选取适合自己的操作系统">如何选取适合自己的操作系统</h2>
 <p>程序开发选择ubuntu没毛病 一般办公人员如果也想体验Linux 那我不太推荐ubuntu Deepin系统更适合非程序员 它包含了所有您需要的应用程序，网页浏览器、幻灯片演示、文档编辑、电子表格、娱乐、声音和图片处理软件，即时通讯软件等等 无需费力的进行各类软件安装，它自带的图形界面足以满足非程序员的日常使用，使得非程序员无非花费太大成本即可开箱即用，据说四月中下旬即将发布v20版本</p>
@@ -313,15 +312,15 @@ sudo ufw enable
 </li>
 </ul>
 <h1 id="vscode">vscode</h1>
-<ol>
+<ul>
 <li><code>链接</code><a href="https://code.visualstudio.com/">vscode 软件下载</a> 使用以下命令安装</li>
-</ol>
+</ul>
 <pre><code class="language-shell">sudo dpkg -i vscode.deb
 </code></pre>
-<ol start="2">
+<ul>
 <li>插件搜索和安装<br>
 <img src="https://yinengmr.github.io//post-images/1586931833501.png" alt="" loading="lazy"></li>
-</ol>
+</ul>
 <blockquote>
 <p><strong>自定义代码块</strong></p>
 <blockquote>
@@ -377,7 +376,13 @@ sudo ufw enable
 </code></pre>
 <p>使用代码块</p>
 <figure data-type="image" tabindex="7"><img src="https://yinengmr.github.io//post-images/1586938410538.png" alt="" loading="lazy"></figure>
-<h3 id="vscode-插件同步">vscode 插件同步</h3>
+<ul>
+<li>vscode 同步设置、插件同步</li>
+</ul>
+<blockquote>
+<p>背景：换电脑需要重装vscode。由于自己之前用的有很多偏好设置，也安装了很多插件，一个个的设置下载太慢了，即使复制setting也麻烦。</p>
+</blockquote>
+<p><a href="https://www.jianshu.com/p/a608a80f728c">vscode 同步设置、插件同步</a></p>
 <h1 id="deepin-安装">deepin 安装</h1>
 <ul>
 <li>同ubuntu安装 下载镜像 制作U盘启动盘输入系统即可</li>
