@@ -7,7 +7,7 @@
 <meta name="keywords" content="Danny的博客">
 <meta name="description" content="学习是一生的事情">
 <meta name="theme-color" content="#000">
-<title>简历 | Danny的博客</title>
+<title>[搬运]JS 正则处理字符串 | Danny的博客</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1589447088918">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -27,7 +27,7 @@
 
 
 
-    <meta name="description" content="简历" />
+    <meta name="description" content="[搬运]JS 正则处理字符串" />
     <meta name="keywords" content="" />
   </head>
   <body>
@@ -224,39 +224,18 @@
               <div class="toc-box right-motion">
   <div class="toc-wrapper auto-number auto" id="toc_wrapper">
     <ul class="markdownIt-TOC">
-<li><a href="#php%E7%A8%8B%E5%BA%8F%E5%91%98%E7%AE%80%E5%8E%86%E6%A8%A1%E6%9D%BF">PHP程序员简历模板</a>
+<li>
 <ul>
-<li><a href="#%E5%85%88%E8%AE%B2%E8%AE%B2%E6%80%8E%E6%A0%B7%E6%89%8D%E6%98%AF%E4%B8%80%E4%BB%BD%E5%A5%BD%E7%9A%84%E6%8A%80%E6%9C%AF%E7%AE%80%E5%8E%86">先讲讲怎样才是一份好的技术简历</a></li>
+<li><a href="#%E8%A7%A3%E6%9E%90-url-params-%E4%B8%BA%E5%AF%B9%E8%B1%A1">解析 URL Params 为对象</a></li>
+<li><a href="#%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E%E5%AE%9E%E7%8E%B0">模板引擎实现</a></li>
+<li><a href="#%E8%BD%AC%E5%8C%96%E4%B8%BA%E9%A9%BC%E5%B3%B0%E5%91%BD%E5%90%8D">转化为驼峰命名</a></li>
+<li><a href="#%E6%9F%A5%E6%89%BE%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E5%87%BA%E7%8E%B0%E6%9C%80%E5%A4%9A%E7%9A%84%E5%AD%97%E7%AC%A6%E5%92%8C%E4%B8%AA%E6%95%B0">查找字符串中出现最多的字符和个数</a></li>
+<li><a href="#%E5%AE%9E%E7%8E%B0%E5%8D%83%E4%BD%8D%E5%88%86%E9%9A%94%E7%AC%A6">实现千位分隔符</a></li>
+<li><a href="#%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E6%98%AF%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81">判断是否是电话号码</a></li>
+<li><a href="#%E9%AA%8C%E8%AF%81%E6%98%AF%E5%90%A6%E6%98%AF%E9%82%AE%E7%AE%B1">验证是否是邮箱</a></li>
+<li><a href="#%E9%AA%8C%E8%AF%81%E6%98%AF%E5%90%A6%E6%98%AF%E8%BA%AB%E4%BB%BD%E8%AF%81">验证是否是身份证</a></li>
 </ul>
 </li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系方式</a></li>
-<li><a href="#%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF">个人信息</a></li>
-<li><a href="#%E5%B7%A5%E4%BD%9C%E7%BB%8F%E5%8E%86">工作经历</a>
-<ul>
-<li><a href="#%E5%AF%8C%E5%A3%AB%E5%BA%B7%E7%A7%91%E6%8A%80-2018%E5%B9%B46%E6%9C%88-~-2020%E5%B9%B41%E6%9C%88">富士康科技 （ 2018年6月 ~ 2020年1月 ）</a>
-<ul>
-<li><a href="#%E5%AE%89%E7%81%AF%E7%B3%BB%E7%BB%9F">安灯系统</a></li>
-<li><a href="#%E7%BD%91%E7%AB%99%E6%B5%81%E9%87%8F%E7%BB%9F%E8%AE%A1">网站流量统计</a></li>
-<li><a href="#%E5%85%B6%E4%BB%96%E9%A1%B9%E7%9B%AE">其他项目</a></li>
-</ul>
-</li>
-<li><a href="#jkl%E5%85%AC%E5%8F%B8-2010%E5%B9%B43%E6%9C%88-~-2012%E5%B9%B48%E6%9C%88">JKL公司 （ 2010年3月 ~ 2012年8月 ）</a>
-<ul>
-<li><a href="#mno%E9%A1%B9%E7%9B%AE">MNO项目</a></li>
-<li><a href="#pqr%E9%A1%B9%E7%9B%AE">PQR项目</a></li>
-<li><a href="#%E5%85%B6%E4%BB%96%E9%A1%B9%E7%9B%AE-2">其他项目</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E5%92%8C%E4%BD%9C%E5%93%81">开源项目和作品</a>
-<ul>
-<li><a href="#%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0">技术文章</a></li>
-<li><a href="#%E6%BC%94%E8%AE%B2%E5%92%8C%E8%AE%B2%E4%B9%89">演讲和讲义</a></li>
-</ul>
-</li>
-<li><a href="#%E6%8A%80%E8%83%BD%E6%B8%85%E5%8D%95">技能清单</a></li>
-<li><a href="#%E8%87%B4%E8%B0%A2">致谢</a></li>
 </ul>
 
   </div>
@@ -521,8 +500,8 @@ window.addEventListener('load', function() {
             <div class="section bg-color post post-page">
               <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://yinengmr.github.io/post/jian-li/">
-      简历
+    <a class="post-title-link" href="https://yinengmr.github.io/post/reg-string/">
+      [搬运]JS 正则处理字符串
     </a>
   </h1>
   <div class="post-meta">
@@ -530,113 +509,174 @@ window.addEventListener('load', function() {
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2019-12-20</span>
+      <span>2020-05-10</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>6分钟</span>
+      <span>4分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1520<span class="pc-show">字数</span></span>
+      <span>744<span class="pc-show">字数</span></span>
     </span>
     
   </div>
 </header>
               <div class="post-body next-md-body" id="post_body">
-                <h1 id="php程序员简历模板">PHP程序员简历模板</h1>
-<p>本简历模板由国内首家互联网人才拍卖网站「 <a href="http://www.jobdeer.com">JobDeer.com</a> 」提供。</p>
-<p>（括号里的是我们的顾问编写的说明，建议在简历书写完成后统一删除）</p>
-<h2 id="先讲讲怎样才是一份好的技术简历">先讲讲怎样才是一份好的技术简历</h2>
-<p>首先，一份好的简历不光说明事实，更通过FAB模式来增强其说服力。</p>
-<ul>
-<li>Feature：是什么</li>
-<li>Advantage：比别人好在哪些地方</li>
-<li>Benefit：如果雇佣你，招聘方会得到什么好处</li>
-</ul>
-<p>其次，写简历和写议论文不同，过分的论证会显得自夸，反而容易引起反感，所以要点到为止。这里的技巧是，提供论据，把论点留给阅读简历的人自己去得出。放论据要具体，最基本的是要数字化，好的论据要让人印象深刻。</p>
-<p>举个例子，下边内容是虚构的：</p>
-<p>2006年，我参与了手机XX网发布系统WAPCMS的开发（<code>这部分是大家都会写的</code>）。作为核心程序员，我不但完成了网站界面、调度队列的开发工作，更提出了高效的组件级缓存系统，通过碎片化缓冲有效的提升了系统的渲染效率。（<code>这部分是很多同学忘掉的，要写出你在这个项目中具体负责的部分，以及你贡献出来的价值。</code>）在该系统上线后，Web前端性能从10QPS提升到200QPS，服务器由10台减少到3台（<code>通过量化的数字来增强可信度</code>）。2008年我升任WAPCMS项目负责人，带领一个3人小组支持着每天超过2亿的PV（<code>这就是Benefit。你能带给前雇主的价值，也就是你能带给新雇主的价值。</code>）。</p>
-<p>有同学问，如果我在项目里边没有那么显赫的成绩可以说怎么办？讲不出成绩时，就讲你的成长。因为学习能力也是每家公司都看中的东西。你可以写你在这个项目里边遇到了一个什么样的问题，别人怎么解决的，你怎么解决的，你的方案好在什么地方，最终这个方案的效果如何。</p>
-<p>具体、量化、有说服力，是技术简历特别需要注重的地方。</p>
-<p>（以上内容在写完简历后，对每一段进行评估，完成后再删除）</p>
-<hr>
-<h1 id="联系方式">联系方式</h1>
-<ul>
-<li>手机：13469943405</li>
-<li>Email：gg771453065@gmail.com</li>
-<li>QQ：771453065</li>
-</ul>
-<hr>
-<h1 id="个人信息">个人信息</h1>
-<ul>
-<li>
-<p>程义能/男/1995</p>
-</li>
-<li>
-<p>本科/萌鹿大学计算机系</p>
-</li>
-<li>
-<p>工作年限：3年</p>
-</li>
-<li>
-<p>技术博客：http://yinengmr.github.io</p>
-</li>
-<li>
-<p>期望职位：WEB 前端开发工程师 PHP开发工程师</p>
-</li>
-<li>
-<p>期望薪资：月薪15k~20k，特别喜欢的公司可例外</p>
-</li>
-<li>
-<p>期望城市：深圳</p>
-</li>
-</ul>
-<hr>
-<h1 id="工作经历">工作经历</h1>
-<p>（工作经历按逆序排列，最新的在最前边，按公司做一级分组，公司内按二级分组）</p>
-<h2 id="富士康科技-2018年6月-~-2020年1月">富士康科技 （ 2018年6月 ~ 2020年1月 ）</h2>
-<h3 id="安灯系统">安灯系统</h3>
-<p>我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快，这个项目中，我最困难的问题是什么，我采取了什么措施，最后结果如何。这个项目中，我最自豪的技术细节是什么，为什么，实施前和实施后的数据对比如何，同事和领导对此的反应如何。<br>
-我在此项目中负责前端部分，</p>
-<h3 id="网站流量统计">网站流量统计</h3>
-<h3 id="其他项目">其他项目</h3>
-<p>（每个公司写2~3个核心项目就好了，如果你有非常大量的项目，那么按分类进行合并，每一类选一个典型写出来。其他的一笔带过即可。）</p>
-<h2 id="jkl公司-2010年3月-~-2012年8月">JKL公司 （ 2010年3月 ~ 2012年8月 ）</h2>
-<h3 id="mno项目">MNO项目</h3>
-<p>我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快，这个项目中，我最困难的问题是什么，我采取了什么措施，最后结果如何。这个项目中，我最自豪的技术细节是什么，为什么，实施前和实施后的数据对比如何，同事和领导对此的反应如何。</p>
-<h3 id="pqr项目">PQR项目</h3>
-<p>我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快，这个项目中，我最困难的问题是什么，我采取了什么措施，最后结果如何。这个项目中，我最自豪的技术细节是什么，为什么，实施前和实施后的数据对比如何，同事和领导对此的反应如何。</p>
-<h3 id="其他项目-2">其他项目</h3>
-<p>（每个公司写2~3个核心项目就好了，如果你有非常大量的项目，那么按分类进行合并，每一类选一个典型写出来。其他的一笔带过即可。）</p>
-<hr>
-<h1 id="开源项目和作品">开源项目和作品</h1>
-<p>（这一段用于放置工作以外的、可证明你的能力的材料）</p>
-<h2 id="技术文章">技术文章</h2>
-<p>（挑选你写作或翻译的技术文章，好的文章可以从侧面证实你的表达和沟通能力，也帮助招聘方更了解你）</p>
-<ul>
-<li><a href="http://get.jobdeer.com/706.get">一个产品经理眼中的云计算：前生今世和未来</a></li>
-<li><a href="http://get.jobdeer.com/343.get">来自HeroKu的HTTP API 设计指南(翻译文章)</a> （ <code>好的翻译文章可以侧证你对英文技术文档的阅读能力</code>）</li>
-</ul>
-<h2 id="演讲和讲义">演讲和讲义</h2>
-<p>（放置你代表公司在一些技术会议上做过的演讲，以及你在公司分享时制作的讲义）</p>
-<h1 id="技能清单">技能清单</h1>
-<p>（我一般主张将技能清单写入到工作经历里边去。不过很难完整，所以有这么一段也不错）</p>
-<p>以下均为我熟练使用的技能</p>
-<ul>
-<li>Web开发：javascript/jQuery/HTML5/vue/php/Mysql/Nginx/Redis</li>
-<li>Web框架：ThinkPHP/OpenResty(lua nginx)</li>
-<li>前端框架：vue/elementUI</li>
-<li>前端工具：webpack/gulp</li>
-<li>数据库相关：MySQL/PDO</li>
-<li>版本管理、文档和自动化部署工具：Git</li>
-</ul>
-<hr>
-<h1 id="致谢">致谢</h1>
-<p>感谢您花时间阅读我的简历，期待能有机会和您共事。</p>
+                <h2 id="解析-url-params-为对象">解析 URL Params 为对象</h2>
+<pre><code class="language-js">let url = 'http://www.domain.com/?user=anonymous&amp;id=123&amp;id=456&amp;city=%E5%8C%97%E4%BA%AC&amp;enabled';
+parseParam(url)
+/* 结果
+{ user: 'anonymous',
+  id: [ 123, 456 ], // 重复出现的 key 要组装成数组，能被转成数字的就转成数字类型
+  city: '北京', // 中文需解码
+  enabled: true, // 未指定值得 key 约定为 true
+}
+*/
+
+function parseParam(url) {
+  const paramsStr = /.+\?(.+)$/.exec(url)[1]; // 将 ? 后面的字符串取出来
+  const paramsArr = paramsStr.split('&amp;'); // 将字符串以 &amp; 分割后存到数组中
+  let paramsObj = {};
+  // 将 params 存到对象中
+  paramsArr.forEach(param =&gt; {
+    if (/=/.test(param)) { // 处理有 value 的参数
+      let [key, val] = param.split('='); // 分割 key 和 value
+      val = decodeURIComponent(val); // 解码
+      val = /^\d+$/.test(val) ? parseFloat(val) : val; // 判断是否转为数字
+
+      if (paramsObj.hasOwnProperty(key)) { // 如果对象有 key，则添加一个值
+        paramsObj[key] = [].concat(paramsObj[key], val);
+      } else { // 如果对象没有这个 key，创建 key 并设置值
+        paramsObj[key] = val;
+      }
+    } else { // 处理没有 value 的参数
+      paramsObj[param] = true;
+    }
+  })
+
+  return paramsObj;
+}
+</code></pre>
+<h2 id="模板引擎实现">模板引擎实现</h2>
+<pre><code class="language-js">
+let template = '我是{{name}}，年龄{{age}}，性别{{sex}}';
+let data = {
+  name: '姓名',
+  age: 18
+}
+render(template, data); // 我是姓名，年龄18，性别undefined
+
+function render(template, data) {
+  const reg = /\{\{(\w+)\}\}/; // 模板字符串正则
+  if (reg.test(template)) { // 判断模板里是否有模板字符串
+    const name = reg.exec(template)[1]; // 查找当前模板里第一个模板字符串的字段
+    template = template.replace(reg, data[name]); // 将第一个模板字符串渲染
+    return render(template, data); // 递归的渲染并返回渲染后的结构
+  }
+  return template; // 如果模板没有模板字符串直接返回
+}
+
+</code></pre>
+<h2 id="转化为驼峰命名">转化为驼峰命名</h2>
+<pre><code class="language-js">var s1 = &quot;get-element-by-id&quot;
+
+// 转化为 getElementById
+
+var f = function(s) {
+    return s.replace(/-\w/g, function(x) {
+        return x.slice(1).toUpperCase();
+    })
+}
+</code></pre>
+<h2 id="查找字符串中出现最多的字符和个数">查找字符串中出现最多的字符和个数</h2>
+<pre><code class="language-js">let str = &quot;abcabcabcbbccccc&quot;;
+let num = 0;
+let char = '';
+
+ // 使其按照一定的次序排列
+str = str.split('').sort().join('');
+// &quot;aaabbbbbcccccccc&quot;
+
+// 定义正则表达式
+let re = /(\w)\1+/g;
+str.replace(re,($0,$1) =&gt; {
+    if(num &lt; $0.length){
+        num = $0.length;
+        char = $1;        
+    }
+});
+console.log(`字符最多的是${char}，出现了${num}次`);
+
+</code></pre>
+<p>字符串查找</p>
+<pre><code class="language-js">a='34';b='1234567'; // 返回 2
+a='35';b='1234567'; // 返回 -1
+a='355';b='12354355'; // 返回 5
+isContain(a,b);
+
+function isContain(a, b) {
+  for (let i in b) {
+    if (a[0] === b[i]) {
+      let tmp = true;
+      for (let j in a) {
+        if (a[j] !== b[~~i + ~~j]) {
+          tmp = false;
+        }
+      }
+      if (tmp) {
+        return i;
+      }
+    }
+  }
+  return -1;
+}
+
+</code></pre>
+<h2 id="实现千位分隔符">实现千位分隔符</h2>
+<pre><code class="language-js">// 保留三位小数
+parseToMoney(1234.56); // return '1,234.56'
+parseToMoney(123456789); // return '123,456,789'
+parseToMoney(1087654.321); // return '1,087,654.321'
+
+function parseToMoney(num) {
+  num = parseFloat(num.toFixed(3));
+  let [integer, decimal] = String.prototype.split.call(num, '.');
+  integer = integer.replace(/\d(?=(\d{3})+$)/g, '$&amp;,');
+  return integer + '.' + (decimal ? decimal : '');
+}
+</code></pre>
+<p>正则表达式(运用了正则的前向声明和反前向声明):</p>
+<pre><code class="language-js">function parseToMoney(str){
+    // 仅仅对位置进行匹配
+    let re = /(?=(?!\b)(\d{3})+$)/g; 
+   return str.replace(re,','); 
+}
+</code></pre>
+<h2 id="判断是否是电话号码">判断是否是电话号码</h2>
+<pre><code class="language-js">function isPhone(tel) {
+    var regx = /^1[34578]\d{9}$/;
+    return regx.test(tel);
+}
+
+</code></pre>
+<h2 id="验证是否是邮箱">验证是否是邮箱</h2>
+<pre><code class="language-js">function isEmail(email) {
+    var regx = /^([a-zA-Z0-9_\-])+@([a-zA-Z0-9_\-])+(\.[a-zA-Z0-9_\-])+$/;
+    return regx.test(email);
+}
+
+</code></pre>
+<h2 id="验证是否是身份证">验证是否是身份证</h2>
+<pre><code class="language-js">function isCardNo(number) {
+    var regx = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+    return regx.test(number);
+}
+
+</code></pre>
 
               </div>
               <div class="post-footer">
@@ -647,7 +687,7 @@ window.addEventListener('load', function() {
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://yinengmr.github.io/post/jian-li/" title="简历">简历</a>
+      <a href="https://yinengmr.github.io/post/reg-string/" title="[搬运]JS 正则处理字符串">[搬运]JS 正则处理字符串</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -662,6 +702,10 @@ window.addEventListener('load', function() {
       
     </div>
     <div class="nav-next">
+      
+        <a class="nav-pc-next" title="Ubuntu18.04 以及常用软件的安装" href="https://yinengmr.github.io/post/2020-04-13-001/">Ubuntu18.04 以及常用软件的安装</a>
+        <a class="nav-mobile-next" title="Ubuntu18.04 以及常用软件的安装" href="https://yinengmr.github.io/post/2020-04-13-001/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>

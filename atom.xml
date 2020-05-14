@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yinengmr.github.io/</id>
     <title>Danny的博客</title>
-    <updated>2020-05-14T02:14:17.727Z</updated>
+    <updated>2020-05-14T09:04:56.209Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yinengmr.github.io/"/>
     <link rel="self" href="https://yinengmr.github.io/atom.xml"/>
@@ -11,11 +11,11 @@
     <icon>https://yinengmr.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Danny的博客</rights>
     <entry>
-        <title type="html"><![CDATA[[搬运]JS 字符串类]]></title>
-        <id>https://yinengmr.github.io/post/ban-yun-js-zi-fu-chuan-lei/</id>
-        <link href="https://yinengmr.github.io/post/ban-yun-js-zi-fu-chuan-lei/">
+        <title type="html"><![CDATA[[搬运]JS 正则处理字符串]]></title>
+        <id>https://yinengmr.github.io/post/reg-string/</id>
+        <link href="https://yinengmr.github.io/post/reg-string/">
         </link>
-        <updated>2020-05-14T01:48:31.000Z</updated>
+        <updated>2020-05-10T01:48:31.000Z</updated>
         <content type="html"><![CDATA[<h2 id="解析-url-params-为对象">解析 URL Params 为对象</h2>
 <pre><code class="language-js">let url = 'http://www.domain.com/?user=anonymous&amp;id=123&amp;id=456&amp;city=%E5%8C%97%E4%BA%AC&amp;enabled';
 parseParam(url)
