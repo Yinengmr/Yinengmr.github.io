@@ -1,0 +1,22 @@
+{
+  "announcement": {
+    "id": "20260917",
+    "title": "公告",
+    "content": "欢迎使用纵享音乐",
+    "dismissible": true
+  },
+  "update": {
+    "desktop": {
+      "version": "1.1.7",
+      "note": "● 修复主源失效问题\n● 歌单广场功能完善",
+      "dismissible": false,
+      "downloadurl": "http://yinengmr.github.io/zxmusic_1.1.8.0917_x64-setup.exe"
+    },
+    "android": {
+      "version": "1.1.7",
+      "note": "● 修复主源失效问题\n● 歌单广场功能完善",
+      "dismissible": false,
+      "downloadurl": "http://yinengmr.github.io/zxmusic_1.1.8.0917.apk"
+    }
+  }
+}

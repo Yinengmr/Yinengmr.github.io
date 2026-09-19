@@ -1,0 +1,1 @@
+import{o as e,r as t,t as n}from"./app-CtNkC-JB.js";var r=JSON.parse(`{"path":"/accumulate/offer/","title":"","lang":"zh-CN","frontmatter":{},"git":{},"filePathRelative":"accumulate/offer/README.md"}`),i={name:`README.md`};function a(n,r,i,a,o,s){return e(),t(`div`)}var o=n(i,[[`render`,a]]);export{r as _pageData,o as default};
