@@ -1,0 +1,22 @@
+{
+  "announcement": {
+    "id": "20260925",
+    "title": "公告",
+    "content": "主音源上游API加密算法变更，正在适配中!",
+    "dismissible": true
+  },
+  "update": {
+    "desktop": {
+      "version": "1.1.7",
+      "note": "● 修复主源失效问题\n● 歌单广场功能完善",
+      "dismissible": false,
+      "downloadurl": "http://yinengmr.github.io/zxmusic_1.1.8.0917_x64-setup.exe"
+    },
+    "android": {
+      "version": "1.1.8",
+      "note": "● 架构升级播放链路原生实现，修复后台播放异常，优化能耗\n● 优化音频设备切换响应\n● 修复本地音乐扫描去重\n\n 推荐全体更新！",
+      "dismissible": false,
+      "downloadurl": "http://yinengmr.github.io/zx_music_1.1.8_20260920.apk"
+    }
+  }
+}
