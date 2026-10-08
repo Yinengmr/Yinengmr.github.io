@@ -1,0 +1,25 @@
+{
+  "name": "Danny老师的知识星球",
+  "short_name": "Danny老师的知识星球",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#2196f3",
+  "description": "Danny老师的知识星球",
+  "theme_color": "blue",
+  "icons": [
+    {
+      "src": "./photo.jpg",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web"
+    },
+    {
+      "platform": "play",
+      "url": ""
+    }
+  ]
+}
