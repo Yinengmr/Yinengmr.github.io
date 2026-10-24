@@ -1,0 +1,22 @@
+{
+  "announcement": {
+    "id": "20261024",
+    "title": "公告",
+    "content": "1.1.10 重磅来袭！多项优化，推荐更新",
+    "dismissible": true
+  },
+  "update": {
+    "desktop": {
+      "version": "1.1.10",
+      "note": "● 支持歌单链接导入/分享\n● 支持桌面歌词\n● 歌单批量操作\n● UI交互优化\n● 右键操作",
+      "dismissible": false,
+      "downloadurl": "https://mp.weixin.qq.com/s/EDSScV5AnQCWI8T5XuHcPg"
+    },
+    "android": {
+      "version": "1.1.10",
+      "note": "● 支持歌单链接导入/分享\n● 歌单批量操作\n● UI交互优化\n● 搜索单曲支持小酷音源",
+      "dismissible": false,
+      "downloadurl": "https://mp.weixin.qq.com/s/EDSScV5AnQCWI8T5XuHcPg"
+    }
+  }
+}
